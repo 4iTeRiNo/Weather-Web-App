@@ -1,20 +1,284 @@
 :root {
+    --color-width: #fff;
     --color-accent: #f9822f;
     --color-text-main: #202b3d;
     --color-text-width: #fff;
     --color-text-grey: #686d80;
-    --color-gradient-forecastday: background-image: linear-gradient(180deg, #ffe1aa 0, #ffd4a7 16.67%, #ffc7a2 33.33%, #f2b99d 50%, #e1ac97 66.67%, #d1a092 83.33%, #c2968d 100%); 
+    --color-gradient-forecastday: background-image: linear-gradient(180deg, #ffe1aa 0, #ffd4a7 16.67%, #ffc7a2 33.33%, #f2b99d 50%, #e1ac97 66.67%, #d1a092 83.33%, #c2968d 100%);
     /* background-image: radial-gradient(circle at 10.39% 10.39%, #ffe1aa 0, #ffd4a7 16.67%, #ffc7a2 33.33%, #f2b99d 50%, #e1ac97 66.67%, #d1a092 83.33%, #c2968d 100%); */
 
+    --font-family-roboto: 'Roboto', sans-serif;
+    --font-family-skranji: 'Skranji', cursive;
+    --font-size-big: 30px;
     --font-size-over: 24px;
     --font-size-normal: 20px;
-    --font-size-small: 16px;
-    
+    --font-size-small: 10px;
+
 
     --background-color-darkblue: #19283f;
-    --background-color-main-light: #fff; 
+    --background-color-main-light: #fff;
     --background-color-lightgrey: #f7f7f7;
     --background-color-lime: #cce169;
     --background-color-icon: #5f6187;
     --background-color-button-overlay: #f5f5f5;
 }
+
+* {
+    font-family: var(--font-family-skranji);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapperCard {
+    position: relative;
+    display: grid;
+    width: 100%;
+    max-width: 290px;
+    max-height: 250px;
+    height: 100%;
+    border-radius: 10%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #19283f; */
+    background: url('./assets/windy/windy3.svg') no-repeat;
+     margin: 0 auto;
+    padding: 15px 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        'header header header'
+        'temperature . .'
+        'info info info';
+}
+
+.wrapperSvg{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color-button-overlay);
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+
+.wrapperHeader {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    grid-area: header;
+
+    .description {
+        text-align: left;
+    }
+}
+
+.wrapperTemperature {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-area: temperature;
+
+}
+
+.wrapperInfoMore {
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-area: info;
+
+    .wrapperTile{
+        border-radius: 15px;
+        line-height: 1.5;
+        padding: 5px 15px;
+        text-align: center;
+    }
+
+    .blue {
+        background-color: var(--background-color-darkblue);
+        color: var(--color-width);
+    }
+
+    .green {
+        background-color: var(--background-color-lime);
+        color: var(--color-text-main);
+    }
+
+    .white {
+        background-color: var(--background-color-main-light);
+        color: var(--color-text-main);
+    }
+
+    .nameprop {
+        font-size: var(--font-size-small);
+        letter-spacing: normal;
+    }
+}
+
+span:first-child {
+    font-size: var(--font-size-big);
+}
+
+span:last-child {
+    background-color: var(--color-width);
+    border-radius: 10px;
+    padding: 2px 10px;
+    font-size: var(--font-size-small);
+}
+
+/* .wrapperCard {
+    position: relative;
+    display: grid;
+    max-width: 230px;
+    height: 250px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    background: url('./assets/windy/windy4.svg') no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    border: 1px solid var(#FFFFFF26, rgba(255, 255, 255, 0.15));
+    padding: 15px 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        'header header header'
+        'temperature . .'
+        'info info info';
+}
+
+
+.wrapperHeader {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    grid-area: header;
+
+    .description {
+        text-align: left;
+    }
+}
+
+.wrapperTemperature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first baseline;
+    grid-area: temperature;
+
+}
+
+.wrapperMoreInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-area: info;
+}
+
+span:first-child {
+    font-size: var(--font-size-big);
+} */
+
+
+/* .wrapperNavigate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .linkItems {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        .linkItem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            height: 50px;
+            width: 50px;
+            border-radius: 30%;
+            transition: background-color ease-in .2s;
+
+            .static {
+                color: var(--color-text-grey);
+            }
+
+            .static:hover {
+                transition: color ease .6s;
+
+                color: var(--color-width);
+            }
+
+            .global {
+                width: 34px;
+                height: 34px;
+                color: var(--color-text-grey);
+
+                #circle {
+                    fill: var(--color-width);
+                }
+            }
+
+            .global:hover {
+                transition: all ease .4s;
+
+                color: var(--color-width);
+
+                #circle {
+                    fill: none;
+                }
+            }
+
+            .calendar {
+                color: var(--color-text-grey);
+                fill: var(--color-text-grey);
+            }
+
+            .calendar:hover {
+                transition: all ease .4s;
+
+                color: var(--color-width);
+                fill: var(--color-width);
+            }
+
+            .stats {
+                color: var(--color-text-grey);
+            }
+
+            .stats:hover {
+                color: var(--color-width);
+                transition: color ease .6s;
+            }
+
+            .point {
+                color: var(--color-text-grey);
+            }
+
+            .point:hover {
+                transition: color ease .6s;
+
+                color: var(--color-width);
+            }
+        }
+
+        .linkItem:hover,
+        .linkItem:active {
+            background-color: var(--color-accent);
+            transition: background-color ease-in .3s;
+        }
+    }
+} */
