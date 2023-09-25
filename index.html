@@ -1,12 +1,142 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- <div class="wrapperNavigate">
+    <nav class="navigate">
+      <ul class="linkItems">
+        <li class="linkItem">
+          <svg width='24px' xmlns="http://www.w3.org/2000/svg" class="static" viewBox="0 0 512 512">
+            <rect x="64" y="320" width="48" height="160" rx="8" ry="8" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+            <rect x="288" y="224" width="48" height="256" rx="8" ry="8" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+            <rect x="400" y="112" width="48" height="368" rx="8" ry="8" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+            <rect x="176" y="32" width="48" height="448" rx="8" ry="8" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+          </svg>
+        </li>
+        <li class="linkItem">
+          <svg width="34px" height="34px" viewBox="0 0 18 18" class="stats" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="Line_up">
+              <path
+                d="M15.6962 4.54179L11.9165 8.32149C11.6377 8.60036 11.1855 8.60036 10.9066 8.32149L9.77421 7.18907C9.49534 6.91019 9.04319 6.91019 8.76431 7.18907L5.69873 10.2547"
+                stroke="currentColor" stroke-width="1.42821" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M2.84229 2.39948V12.9683C2.84229 13.7681 2.84229 14.1681 2.99795 14.4736C3.13488 14.7423 3.35337 14.9608 3.6221 15.0977C3.92762 15.2534 4.32755 15.2534 5.12743 15.2534H15.6962"
+                stroke="currentColor" stroke-width="1.42821" stroke-linecap="round" />
+            </g>
+          </svg>
+        </li>
+        <li class="linkItem">
+          <svg width="34px" height="34px" xmlns="http://www.w3.org/2000/svg" class="calendar" viewBox="0 0 512 512">
+            <rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" x="48" y="80" width="416"
+              height="384" rx="48" />
+            <circle stroke="currentColor" cx="296" cy="232" r="24" />
+            <circle stroke="currentColor" cx="376" cy="232" r="24" />
+            <circle stroke="currentColor" cx="296" cy="312" r="24" />
+            <circle stroke="currentColor" cx="376" cy="312" r="24" />
+            <circle stroke="currentColor" cx="136" cy="312" r="24" />
+            <circle stroke="currentColor" cx="216" cy="312" r="24" />
+            <circle stroke="currentColor" cx="136" cy="392" r="24" />
+            <circle stroke="currentColor" cx="216" cy="392" r="24" />
+            <circle stroke="currentColor" cx="296" cy="392" r="24" />
+            <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" stroke-linecap="round"
+              d="M128 48v32M384 48v32" />
+            <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M464 160H48" />
+          </svg>
+        </li>
+        <li class="linkItem">
+          <svg width="24" height="32" viewBox="0 0 24 32" class='point' fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15 28C19 24 23 17.447 23 12C23 5.925 18.075 1 12 1C5.925 1 1 5.925 1 12C1 21 12 31 12 31M1 31H23M17 12C17 9.238 14.762 7 12 7C9.238 7 7 9.238 7 12C7 14.762 9.238 17 12 17C14.762 17 17 14.762 17 12Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </li>
+        <li class="linkItem">
+          <svg xmlns="http://www.w3.org/2000/svg" class="global" viewBox="0 0 512 512">
+            <g>
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                d="M368 128h80M64 128h240M368 384h80M64 384h240M208 256h240M64 256h80" />
+            </g>
+            <g id="circle">
+              <circle cx="336" cy="128" r="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="32" />
+              <circle cx="176" cy="256" r="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="32" />
+              <circle cx="336" cy="384" r="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="32" />
+            </g>
+          </svg>
+        </li>
+      </ul>
+    </nav>
+  </div> -->
+
+  <div class="wrapper">
+    <div class="wrapperCard">
+      <div class="wrapperHeader">
+        <div class="wrapperSvg">
+          <img width="24px" height="24px" src="./src/assets/svg/cloudy-rainy.svg" alt="sun">
+        </div>
+        <div class="description">
+          <p>Weather</p>
+          <p>what's the weather</p>
+        </div>
+      </div>
+      <div class="wrapperTemperature">
+        <div class="temperature">
+          <span>22&#8451;</span>
+          <span>11&#8451;</span>
+        </div>
+        <p>Sunny</p>
+      </div>
+      <div class="wrapperInfoMore">
+        <div class="wrapperTile blue">
+          <p class="nameprop">Preesure</p>
+          <p class="valueprop">800md</p>
+        </div>
+        <div class="wrapperTile green">
+          <p class="nameprop">Visibility</p>
+          <p class="valueprop">4.3km</p>
+        </div>
+        <div class="wrapperTile white">
+          <p class="nameprop">Humidity</p>
+          <p class="valueprop">87%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="wrapperCard">
+    <div class="wrapperHeader">
+      <div class="wrapperSvg">
+      </div>
+      <div class="description">
+        <p>Tomorrow</p>
+        <p>kaliningrad</p>
+      </div>
+    </div>
+    <div class="wrapperTemperature">
+      <div>
+        <span>22&deg;C</span>
+      </div>
+      <p>Windy</p>
+    </div>
+   </div> -->
+  
+   <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
