@@ -5,7 +5,6 @@ import { Provider } from 'react-redux'
 import 'normalize.css'
 import './main.css'
 
-
 import App from './App.tsx'
 import store from './store/index.tsx'
 

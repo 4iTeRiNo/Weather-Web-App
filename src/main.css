@@ -8,13 +8,16 @@
     --color-gradient-forecastday: linear-gradient(180deg, #ffe1aa 0, #ffd4a7 16.67%, #ffc7a2 33.33%, #f2b99d 50%, #e1ac97 66.67%, #d1a092 83.33%, #c2968d 100%); 
     /* background-image: radial-gradient(circle at 10.39% 10.39%, #ffe1aa 0, #ffd4a7 16.67%, #ffc7a2 33.33%, #f2b99d 50%, #e1ac97 66.67%, #d1a092 83.33%, #c2968d 100%); */
 
+    --font-family-roboto: 'Roboto', sans-serif;
+    --font-family-skranji: 'Skranji', cursive;
+    --font-size-big: 30px;
     --font-size-over: 24px;
     --font-size-normal: 20px;
-    --font-size-small: 16px;
-    
+    --font-size-small: 10px;
+
 
     --background-color-darkblue: #19283f;
-    --background-color-main-light: #fff; 
+    --background-color-main-light: #fff;
     --background-color-lightgrey: #f7f7f7;
     --background-color-lime: #cce169;
     --background-color-icon: #5f6187;
