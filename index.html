@@ -7,10 +7,10 @@
   <title>Weather App</title>
 </head>
 
-<body class="body">
-  <!-- <div id="root"></div> -->
+<body>
+  <div id="root"></div>
 
-  <header class="header">
+  <!-- <header class="header">
     <section class="intro">
       <div>
         <img src="" alt="">
@@ -43,96 +43,7 @@
   </header>
   <main class="main">
     <div class="wrapperNavigate">
-      <nav class="navigate">
-        <ul class="linkItems">
-          <li class="linkItem">
-            <svg width='24px' xmlns="http://www.w3.org/2000/svg" class="static" viewBox="0 0 512 512">
-              <rect x="64" y="320" width="48" height="160" rx="8" ry="8" fill="none" stroke="currentColor"
-                stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
-              <rect x="288" y="224" width="48" height="256" rx="8" ry="8" fill="none" stroke="currentColor"
-                stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
-              <rect x="400" y="112" width="48" height="368" rx="8" ry="8" fill="none" stroke="currentColor"
-                stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
-              <rect x="176" y="32" width="48" height="448" rx="8" ry="8" fill="none" stroke="currentColor"
-                stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
-            </svg>
-          </li>
-          <li class="linkItem">
-            <svg width="34px" height="34px" viewBox="0 0 18 18" class="stats" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <g id="Line_up">
-                <path
-                  d="M15.6962 4.54179L11.9165 8.32149C11.6377 8.60036 11.1855 8.60036 10.9066 8.32149L9.77421 7.18907C9.49534 6.91019 9.04319 6.91019 8.76431 7.18907L5.69873 10.2547"
-                  stroke="currentColor" stroke-width="1.42821" stroke-linecap="round" stroke-linejoin="round" />
-                <path
-                  d="M2.84229 2.39948V12.9683C2.84229 13.7681 2.84229 14.1681 2.99795 14.4736C3.13488 14.7423 3.35337 14.9608 3.6221 15.0977C3.92762 15.2534 4.32755 15.2534 5.12743 15.2534H15.6962"
-                  stroke="currentColor" stroke-width="1.42821" stroke-linecap="round" />
-              </g>
-            </svg>
-          </li>
-          <li class="linkItem">
-            <svg width="34px" height="34px" xmlns="http://www.w3.org/2000/svg" class="calendar" viewBox="0 0 512 512">
-              <rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" x="48" y="80"
-                width="416" height="384" rx="48" />
-              <circle stroke="currentColor" cx="296" cy="232" r="24" />
-              <circle stroke="currentColor" cx="376" cy="232" r="24" />
-              <circle stroke="currentColor" cx="296" cy="312" r="24" />
-              <circle stroke="currentColor" cx="376" cy="312" r="24" />
-              <circle stroke="currentColor" cx="136" cy="312" r="24" />
-              <circle stroke="currentColor" cx="216" cy="312" r="24" />
-              <circle stroke="currentColor" cx="136" cy="392" r="24" />
-              <circle stroke="currentColor" cx="216" cy="392" r="24" />
-              <circle stroke="currentColor" cx="296" cy="392" r="24" />
-              <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" stroke-linecap="round"
-                d="M128 48v32M384 48v32" />
-              <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M464 160H48" />
-            </svg>
-          </li>
-          <li class="linkItem">
-            <svg width="24" height="32" viewBox="0 0 24 32" class='point' fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M15 28C19 24 23 17.447 23 12C23 5.925 18.075 1 12 1C5.925 1 1 5.925 1 12C1 21 12 31 12 31M1 31H23M17 12C17 9.238 14.762 7 12 7C9.238 7 7 9.238 7 12C7 14.762 9.238 17 12 17C14.762 17 17 14.762 17 12Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-          </li>
-          <li class="linkItem">
-            <svg xmlns="http://www.w3.org/2000/svg" class="global" viewBox="0 0 512 512">
-              <g>
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
-                  d="M368 128h80M64 128h240M368 384h80M64 384h240M208 256h240M64 256h80" />
-              </g>
-              <g id="circle">
-                <circle cx="336" cy="128" r="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="32" />
-                <circle cx="176" cy="256" r="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="32" />
-                <circle cx="336" cy="384" r="32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="32" />
-              </g>
-            </svg>
-          </li>
-        </ul>
-
-        <ul class="linkItems">
-          <li class="linkItem">
-            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g id="gg:log-off">
-                <g id="Group">
-                  <path id="Vector"
-                    d="M23.2917 7.18278C23.2917 6.7076 23.1029 6.25188 22.7669 5.91588C22.4309 5.57988 21.9752 5.39111 21.5 5.39111C21.0248 5.39111 20.5691 5.57988 20.2331 5.91588C19.8971 6.25188 19.7083 6.7076 19.7083 7.18278L19.7029 21.5215C19.7029 21.9967 19.8917 22.4524 20.2277 22.7884C20.5637 23.1244 21.0194 23.3132 21.4946 23.3132C21.9698 23.3132 22.4255 23.1244 22.7615 22.7884C23.0975 22.4524 23.2863 21.9967 23.2863 21.5215L23.2917 7.18457V7.18278Z"
-                    fill="#CCCCCC" />
-                  <path id="Vector_2"
-                    d="M7.16666 23.2773C7.16666 19.3177 8.7702 15.7344 11.3645 13.1418L13.8979 15.6753C12.3945 17.1786 11.3706 19.0941 10.9557 21.1794C10.5409 23.2647 10.7537 25.4262 11.5673 27.3906C12.3809 29.3549 13.7588 31.0339 15.5266 32.2152C17.2945 33.3964 19.3729 34.0269 21.4991 34.0269C23.6253 34.0269 25.7037 33.3964 27.4715 32.2152C29.2394 31.0339 30.6172 29.3549 31.4309 27.3906C32.2445 25.4262 32.4573 23.2647 32.0425 21.1794C31.6276 19.0941 30.6037 17.1786 29.1002 15.6753L31.6354 13.1418C33.3021 14.8086 34.532 16.8607 35.2162 19.1163C35.9004 21.3719 36.0177 23.7614 35.5579 26.0732C35.098 28.385 34.0751 30.5477 32.5798 32.3698C31.0844 34.1918 29.1628 35.617 26.9852 36.519C24.8075 37.421 22.441 37.7721 20.0953 37.5411C17.7495 37.3101 15.4969 36.5042 13.5371 35.1947C11.5772 33.8852 9.9705 32.1126 8.85931 30.0338C7.74813 27.9551 7.16674 25.6344 7.16666 23.2773Z"
-                    fill="#CCCCCC" />
-                </g>
-              </g>
-            </svg>
-
-          </li>
-        </ul>
-      </nav>
+      
     </div>
     <div class="wrapperCards">
       <div class="wrapper">
@@ -372,13 +283,7 @@
         Newt 5 Days
       </span>
     </button>
-  </footer>
-
-
-
-
-
-
+  </footer> -->
 
   <script type="module" src="/src/main.tsx"></script>
 </body>
