@@ -16,26 +16,26 @@ export const Navigation = () => {
     <div className={styles.navigation}>
       <nav className="navigate">
         <ul className="linkItems">
-          <li className="linkItem">
-            <Statistic />
+          <li className={styles.linkItem}>
+            <Statistic className={styles.svgColor}/>
           </li>
-          <li className="linkItem">
-            <Stats />
+          <li className={styles.linkItem}>
+            <Stats className={styles.svgColor}/>
           </li>
-          <li className="linkItem">
-            <Calendar />
+          <li className={styles.linkItem}>
+            <Calendar className={styles.svgColor} />
           </li>
-          <li className="linkItem">
-            <Point />
+          <li className={styles.linkItem}>
+            <Point className={styles.svgColor}/>
           </li>
-          <li className="linkItem">
-            <Settings />
+          <li className={styles.linkItem}>
+            <Settings className={styles.svgColor}/>
           </li>
         </ul>
 
         <ul className="linkItems">
-          <li className="linkItem">
-            <LogInOut />
+          <li className={styles.linkItem}>
+            <LogInOut className={styles.svgColor}/>
           </li>
         </ul>
       </nav>
