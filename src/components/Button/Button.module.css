@@ -1,0 +1,27 @@
+.button {
+    width: 160px;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    float: right;
+    align-items: center;
+    border-radius: 12px;
+
+    border: none;
+    background-color: var(--color-accent);
+    padding: 12px 12px;
+
+}
+
+.text {
+    text-align: center;
+    color: var(--color-width);
+}
+
+.calendar {
+    color: var(--color-width);
+    fill: var(--color-width);
+
+    width: 20px;
+    height: 20px;
+}

@@ -116,19 +116,7 @@
     align-items: center;
 }
 
-.button {
-    width: 150px;
-    cursor: pointer;
-    float: right;
-    align-items: end;
-    border-radius: 15px;
-    color: var(--color-width);
-    fill: var(--color-width);
-    border: none;
-    background-color: var(--color-accent);
-    padding: 15px 12px;
 
-}
 
 
 
