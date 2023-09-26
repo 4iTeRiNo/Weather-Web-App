@@ -2,7 +2,6 @@ import styles from './Navigation.module.css';
 
 import { StatisticIcon, StatsIcon, CalendarIcon, PointIcon, SettingsIcon, LogInOutIcon  } from '../SGVIcons';
 
-
 // interface NavigationProps { }
 
 export const Navigation = () => {
