@@ -1,5 +1,6 @@
 :root {
     --color-width: #fff;
+    --color-grey: #dde2e8;
     --color-accent: #f9822f;
     --color-text-main: #202b3d;
     --color-text-width: #fff;
@@ -105,22 +106,6 @@
 
 }
 
-.footer {
-    grid-area: footer;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-
-
-
 /* .wrapperCard {
     position: relative;
     display: grid;
@@ -173,27 +158,3 @@
 span:first-child {
     font-size: var(--font-size-big);
 } */
-
-
-
-
-.footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    background-color: var(--background-color-lightgrey);
-
-    .currentPoint {
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-
-        .city {
-            display: flex;
-            flex-direction: column;
-        }
-
-    }
-
-}
