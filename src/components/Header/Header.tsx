@@ -17,9 +17,9 @@ export const Header = () => {
           <h1>Hello,</h1>
           <span className={styles.name}>Username</span>
         </div>
-        <form autoComplete='on' className={styles.wrapperSearch}>
+        <form autoComplete='on' className={styles.searchForm}>
           <div className={styles.search}>
-            <input type="text" className={styles.textField} name="cityName" id="search" placeholder="Search city" />
+            <input type="text" className={styles.text} name="cityName" id="search" placeholder="Search city" />
             <label htmlFor="search" className="label">
               <Search />
             </label>

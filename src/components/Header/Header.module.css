@@ -3,7 +3,6 @@
 }
 
 .intro {
-
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -27,7 +26,7 @@ h1 {
     font-size: var(--font-size-over);
 }
 
-.wrapperSearch {
+.searchForm {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -53,11 +52,11 @@ h1 {
     background-color: var(--background-color-button-overlay, white);
     box-shadow: var(--color-text-main);
     border-radius: 15px;
-    
+
     padding: 0 16px;
 }
 
-.textField {
+.text {
     max-width: calc(100% - 24px - 16px);
     height: 40px;
     font-size: 0.75rem;
@@ -71,7 +70,6 @@ h1 {
     flex-grow: 5;
     line-height: 1.5;
 }
-
 
 #search {
     cursor: pointer;
