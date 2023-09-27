@@ -13,7 +13,7 @@ import LogInOut from '../../assets/svg/navigate/gg_log-off.svg?react';
 export const Navigation = () => {
   return (
 
-    <div className={styles.navigation}>
+    <aside className={styles.navigation}>
       <nav className="navigate">
         <ul className="linkItems">
           <li className={styles.linkItem}>
@@ -39,6 +39,6 @@ export const Navigation = () => {
           </li>
         </ul>
       </nav>
-    </div>
+    </aside>
   )
 };

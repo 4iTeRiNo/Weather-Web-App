@@ -11,7 +11,7 @@ export const Header = () => {
     <header className={styles.header}>
       <section className={styles.intro}>
         <div>
-
+          <img src="#" alt="#" />
         </div>
         <div className={styles.user}>
           <h1>Hello,</h1>
