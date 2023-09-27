@@ -1,5 +1,5 @@
 .header {
-    grid-area: search;
+    grid-area: header;
 }
 
 .intro {
@@ -57,7 +57,7 @@ h1 {
 }
 
 .text {
-    max-width: calc(100% - 24px - 16px);
+    max-width: 180px;
     height: 40px;
     font-size: 0.75rem;
 
