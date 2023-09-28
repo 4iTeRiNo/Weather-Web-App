@@ -1,0 +1,11 @@
+.main {
+    grid-area: main;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        'navigate  cardTile cardTile cardTile'
+        'navigate  cardTile cardTile cardTile'
+        'navigate  currentWeather currentWeather currentWeather ';
+}

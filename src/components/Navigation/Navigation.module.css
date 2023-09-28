@@ -1,0 +1,45 @@
+.navigation {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkItems {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+}
+
+.linkItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    height: 50px;
+    width: 50px;
+    border-radius: 30%;
+    transition: background-color ease-in .2s;
+
+}
+
+.svgColor {
+    width: 35px;
+    height: 35px;
+    color: var(--color-text-grey);
+}
+
+.svgColor:hover,
+.svgColor:active {
+    color: var(--color-width);
+    transition: color ease .6s;
+}
+
+.linkItem:hover,
+.linkItem:active {
+    background-color: var(--color-accent);
+    transition: background-color ease-in .3s;
+}
