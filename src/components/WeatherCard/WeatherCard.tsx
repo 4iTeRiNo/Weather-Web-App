@@ -1,7 +1,7 @@
 import styles from './WeatherCard.module.css';
 import cn from 'classnames'
 
-import Icon from '../../assets/cloudy/cloudy.svg?react'
+import { CloudyIcon } from '../SGVIcons';
 
 // interface WeatherCardProps { }
 
@@ -11,7 +11,7 @@ export const WeatherCard = () => {
     <div className={styles.weatherCard}>
       <div className={styles.header}>
         <div className={styles.svg}>
-          <Icon />
+          <CloudyIcon />
         </div>
         <div className={styles.city}>
           <p>Weather</p>
