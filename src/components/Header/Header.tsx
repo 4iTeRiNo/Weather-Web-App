@@ -1,7 +1,6 @@
 import styles from './Header.module.css';
 
-import Search from '../../assets/svg/search.svg?react'
-import Notifications from '../../assets/svg/notifications.svg?react'
+import { SearchIcon, NotificationIcon } from '../SGVIcons';
 
 // interface HeaderProps { }
 
@@ -21,10 +20,10 @@ export const Header = () => {
           <div className={styles.search}>
             <input type="text" className={styles.text} name="cityName" id="search" placeholder="Search city" />
             <label htmlFor="search" className="label">
-              <Search />
+              <SearchIcon />
             </label>
           </div>
-          <Notifications />
+          <NotificationIcon />
         </form>
       </section>
     </header>

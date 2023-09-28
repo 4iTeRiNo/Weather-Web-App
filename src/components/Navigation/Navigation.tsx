@@ -1,11 +1,6 @@
 import styles from './Navigation.module.css';
 
-import Statistic from '../../assets/svg/navigate/statistic.svg?react';
-import Stats from '../../assets/svg/navigate/stats-chart-outline.svg?react';
-import Point from '../../assets/svg/navigate/point.svg?react';
-import Calendar from '../../assets/svg/navigate/calendar-outline.svg?react';
-import Settings from '../../assets/svg/navigate/settings.svg?react';
-import LogInOut from '../../assets/svg/navigate/gg_log-off.svg?react';
+import { StatisticIcon, StatsIcon, CalendarIcon, PointIcon, SettingsIcon, LogInOutIcon  } from '../SGVIcons';
 
 
 // interface NavigationProps { }
@@ -17,25 +12,25 @@ export const Navigation = () => {
       <nav className="navigate">
         <ul className="linkItems">
           <li className={styles.linkItem}>
-            <Statistic className={styles.svgColor}/>
+            <StatisticIcon className={styles.svgColor}/>
           </li>
           <li className={styles.linkItem}>
-            <Stats className={styles.svgColor}/>
+            <StatsIcon className={styles.svgColor}/>
           </li>
           <li className={styles.linkItem}>
-            <Calendar className={styles.svgColor} />
+            <CalendarIcon className={styles.svgColor} />
           </li>
           <li className={styles.linkItem}>
-            <Point className={styles.svgColor}/>
+            <PointIcon className={styles.svgColor}/>
           </li>
           <li className={styles.linkItem}>
-            <Settings className={styles.svgColor}/>
+            <SettingsIcon className={styles.svgColor}/>
           </li>
         </ul>
 
         <ul className="linkItems">
           <li className={styles.linkItem}>
-            <LogInOut className={styles.svgColor}/>
+            <LogInOutIcon className={styles.svgColor}/>
           </li>
         </ul>
       </nav>
