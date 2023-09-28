@@ -1,33 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { City } from '../types'
 
-export interface City {
-    name: string;
-    region: string;
-    country: string;
-    lat: number;
-    lon: number;
-    tz_id: string;
-    localtime_epoch: number;
-    localtime: string;
+type cityState = {
+    list: City[]
 }
 
-const initialState: City = {
-    "name": "Kaliningrad",
-    "region": "Kaliningrad",
-    "country": "Russia",
-    "lat": 54.71,
-    "lon": 20.5,
-    "tz_id": "Europe/Kaliningrad",
-    "localtime_epoch": 1695890176,
-    "localtime": "2023-09-28 10:36"
+const initialState: cityState = {
+    list: []
 }
 
 export const citySlice = createSlice({
     name: 'city',
     initialState,
-    reducers:{}
+    reducers: {}
 })
 
-export const {} = citySlice.actions
+export const { } = citySlice.actions
 
 export default citySlice.reducer;
