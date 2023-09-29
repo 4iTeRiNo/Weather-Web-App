@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { City } from '../types'
 
-type cityState = {
+type defaultCities = {
     list: City[]
 }
 
-const initialState: cityState = {
+const initialState: defaultCities = {
     list: []
 }
 

@@ -5,6 +5,4 @@ export type City = {
     lat: number;
     lon: number;
     tz_id: string;
-    localtime_epoch: number;
-    localtime: string;
 }
