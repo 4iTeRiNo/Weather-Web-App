@@ -1,8 +1,8 @@
 import {combineReducers } from 'redux'
-import citysReducer from './defaultCitySlice'
+import citiesReducer from './defaultCitySlice'
 
 const rootReducer = combineReducers({
-    citys: citysReducer,
+    cities: citiesReducer,
 })
 
 export default rootReducer;

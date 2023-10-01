@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { City } from '../types'
 
-const API_KEY = import.meta.env.WEATHER_API_KEY
+const API_KEY = import.meta.env.VITE_WEATHER_KEY
 
 type defaultCities = {
     list: City[],
@@ -30,7 +30,8 @@ export const fetchCities = createAsyncThunk<City[], undefined, { rejectValue: st
 
     })
 
-export const citySlice = createSlice({
+
+const citySlice = createSlice({
     name: 'city',
     initialState,
     reducers: {},
@@ -49,7 +50,5 @@ export const citySlice = createSlice({
             })
     }
 })
-
-// export const { } = citySlice.actions;
 
 export default citySlice.reducer;
