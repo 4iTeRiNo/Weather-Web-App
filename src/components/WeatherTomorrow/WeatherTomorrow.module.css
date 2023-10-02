@@ -1,0 +1,20 @@
+.weatherTomorrow {
+    grid-area: tomorrow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 20px;
+    background: url(../../assets/rainy/rainy3.svg);
+    background-size: cover;
+    border-radius: 15px;
+    line-height: 1.5;
+}
+
+.temperature {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
