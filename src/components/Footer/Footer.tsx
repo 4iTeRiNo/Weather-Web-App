@@ -1,14 +1,13 @@
 import styles from './Footer.module.css';
-import { Button } from '../Button';
-import { GraphSun } from '../GraphSun';
-import { WeatherPrediction } from '../WeatherPrediction';
-import { RadiationUVI } from '../RadiationUVI';
+import {Button} from '../Button';
+import {GraphSun} from '../GraphSun';
+import {WeatherPrediction} from '../WeatherPrediction';
+import {RadiationUVI} from '../RadiationUVI';
 
 // interface FooterProps { }
 
 export const Footer = () => {
   return (
-
     <footer className={styles.footer}>
       <div className={styles.currentPoint}>
         <div className={styles.city}>
@@ -22,5 +21,5 @@ export const Footer = () => {
       <WeatherPrediction />
       <Button />
     </footer>
-  )
+  );
 };
