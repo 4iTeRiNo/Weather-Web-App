@@ -34,7 +34,7 @@
 
 .svgColor:hover,
 .svgColor:active {
-    color: var(--color-width);
+    color: var(--color-white);
     transition: color ease .6s;
 }
 
