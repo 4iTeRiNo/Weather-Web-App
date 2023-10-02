@@ -3,6 +3,7 @@
     align-items: center;
     padding: 15px;
     column-gap: 10px;
+
     border-radius: 15px;
     background-color: var(--background-color-darkblue);
 }
@@ -13,6 +14,7 @@
     font-size: 12px;
     font-weight: 600;
     row-gap: 9px;
+
     justify-content: space-around;
 }
 

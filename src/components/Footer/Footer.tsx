@@ -1,8 +1,10 @@
 import styles from './Footer.module.css';
+
 import {Button} from '../Button';
 import {GraphSun} from '../GraphSun';
 import {WeatherPrediction} from '../WeatherPrediction';
 import {RadiationUVI} from '../RadiationUVI';
+
 
 // interface FooterProps { }
 
@@ -22,4 +24,5 @@ export const Footer = () => {
       <Button />
     </footer>
   );
+
 };
