@@ -5,7 +5,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
-        'navigate  cardTile cardTile cardTile'
-        'navigate  cardTile cardTile cardTile'
-        'navigate  currentWeather currentWeather currentWeather ';
+        'aside  cardTile cardTile cardTile'
+        'aside  cardTile cardTile cardTile'
+        'aside  currentWeather currentWeather currentWeather ';
 }
