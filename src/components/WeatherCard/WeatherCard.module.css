@@ -67,7 +67,7 @@
 
 .blue {
     background-color: var(--background-color-darkblue);
-    color: var(--color-width);
+    color: var(--color-white);
 }
 
 .green {
@@ -90,7 +90,7 @@
 }
 
 .night {
-    background-color: var(--color-width);
+    background-color: var(--color-white);
     border-radius: 10px;
     padding: 2px 10px;
     font-size: var(--font-size-small);

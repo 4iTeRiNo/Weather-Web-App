@@ -1,5 +1,7 @@
 import styles from './Footer.module.css';
 import { Button } from '../Button';
+import { GraphSun } from '../GraphSun';
+import { WeatherPrediction } from '../WeatherPrediction';
 
 // interface FooterProps { }
 
@@ -14,6 +16,8 @@ export const Footer = () => {
       </div>
       <span className={styles.temp}>22&#176;С</span>
     </div>
+    <GraphSun/>
+    <WeatherPrediction/>
     <Button/>
   </footer>
 )};
