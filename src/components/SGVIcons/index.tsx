@@ -15,3 +15,4 @@ export { default as CloudyIcon} from '../../assets/cloudy/cloudyIcon.svg?react';
 export { default as SunnyIcon} from '../../assets/sunny/sunnyIcon.svg?react';
 export { default as SnowyIcon} from '../../assets/snowy/snowyIcon.svg?react';
 export { default as WindyIcon} from '../../assets/windy/windyIcon.svg?react';
+export { default as AvatarICon} from '../../assets/user/avatar.svg?react';

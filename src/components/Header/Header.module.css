@@ -1,16 +1,36 @@
 .header {
     grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
 }
 
 .intro {
     display: flex;
     flex-direction: row;
+    max-width: 900px;
+    width: 100%;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
 }
 
 .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    vertical-align: middle;
+
+}
+
+.welcome {
     display: flex;
     flex-direction: column;
 }

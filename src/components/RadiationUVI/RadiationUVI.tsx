@@ -6,7 +6,7 @@ import styles from './RadiationUvi.module.css';
 export const RadiationUVI = () => (
   <div className={styles.radiationUvi}>
         <div className={styles.svg}>
-          <SunnyIcon />
+          <SunnyIcon width='50px' height='50px'/>
         </div>
        <div className={styles.wrapper}>
         <span className={styles.air}>

@@ -1,6 +1,13 @@
 import styles from './Navigation.module.css';
 
-import {StatisticIcon, StatsIcon, CalendarIcon, PointIcon, SettingsIcon, LogInOutIcon} from '../SGVIcons';
+import { StatisticIcon, 
+  StatsIcon, 
+  CalendarIcon, 
+  PointIcon, 
+  SettingsIcon, 
+  LogInOutIcon  
+} from '../SGVIcons';
+
 
 // interface NavigationProps { }
 
