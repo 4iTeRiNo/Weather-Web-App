@@ -15,7 +15,7 @@ const initialState: defaultCities = {
     error: null,
 }
 
-export const fetchCities = createAsyncThunk<City[], undefined, { rejectValue: string }>(
+export const fetchDefaultCities = createAsyncThunk<City[], undefined, { rejectValue: string }>(
     'cities/fetchCities',
     async function (_, { rejectWithValue }) {
 
@@ -33,24 +33,24 @@ export const fetchCities = createAsyncThunk<City[], undefined, { rejectValue: st
     })
 
 
-const citySlice = createSlice({
+const citiesSlice = createSlice({
     name: 'city',
     initialState,
     reducers: {},
     extraReducers: builder => {
         builder
-            .addCase(fetchCities.pending, (state,) => {
+            .addCase(fetchDefaultCities.pending, (state,) => {
                 state.status = 'loading';
                 state.error = null;
             })
-            .addCase(fetchCities.fulfilled, (state, action) => {
+            .addCase(fetchDefaultCities.fulfilled, (state, action) => {
                 state.list = action.payload;
-                state.status = 'succeeded'
+                state.status = 'succeeded';
             })
-            .addCase(fetchCities.rejected, (state,) => {
+            .addCase(fetchDefaultCities.rejected, (state,) => {
                 state.status = 'failed'
             })
     }
 })
 
-export default citySlice.reducer;
+export default citiesSlice.reducer;

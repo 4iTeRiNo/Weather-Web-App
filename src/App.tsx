@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { fetchCities } from "./store/defaultCitySlice"
+import { fetchDefaultCities } from "./store/defaultCitySlice"
 import { useAppDispatch } from "./hooks"
 
 function App() {
@@ -7,8 +7,7 @@ function App() {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch(fetchCities())
-
+    dispatch(fetchDefaultCities())
   }, [dispatch])
 
   return (
