@@ -2,7 +2,7 @@ import styles from './WeatherValueBoard.module.css';
 import {
   RainyIcon,
   SunnyIcon,
-  SnowyIcon
+  CloudyIcon,
 } from '../SGVIcons'
 import cn from 'classnames'
 
@@ -20,41 +20,42 @@ export const WeatherValueBoard = () => {
       <div className={styles.lineChart}>
         <div className={styles.axis}>
           <div className={styles.tick}>
-            <RainyIcon className={cn(styles.overlay, styles.active)}/>
+            <RainyIcon className={cn(styles.overlay, styles.active)} />
             <span className={styles.value}>26°C</span>
-            <span className={styles.name}>MON</span>
+            <span className={styles.name}>Morning</span>
             <span className={styles.dayNumber}>10</span>
           </div>
           <div className={styles.tick}>
-            <SunnyIcon className={cn(styles.overlay)}/>
+            <SunnyIcon className={cn(styles.overlay)} />
             <span className={styles.value}>26°C</span>
-            <span className={styles.name}>MON</span>
+            <span className={styles.name}>Afternoon</span>
             <span className={styles.dayNumber}>11</span>
           </div>
           <div className={styles.tick}>
-            <SnowyIcon className={cn(styles.overlay)}/>
+            <CloudyIcon className={cn(styles.overlay)} />
             <span className={styles.value}>26°C</span>
-            <span className={styles.name}>MON</span>
+            <span className={styles.name}>Evening</span>
             <span className={styles.dayNumber}>12</span>
+          </div>
+          <div className={styles.tick}>
+            <SunnyIcon className={cn(styles.overlay)} />
+            <span className={styles.value}>26°C</span>
+            <span className={styles.name}>Night</span>
+            <span className={styles.dayNumber}>13</span>
           </div>
           {/* <div className={styles.tick}>
             <span className={styles.value}>26°C</span>
-            <span className={styles.name}>MON</span>
+            <span className={styles.name}></span>
             <span className={styles.dayNumber}>13</span>
           </div>
           <div className={styles.tick}>
             <span className={styles.value}>26°C</span>
-            <span className={styles.name}>MON</span>
-            <span className={styles.dayNumber}>13</span>
-          </div>
-          <div className={styles.tick}>
-            <span className={styles.value}>26°C</span>
-            <span className={styles.name}>MON</span>
+            <span className={styles.name}>Evening</span>
             <span className={styles.dayNumber}>14</span>
           </div>
           <div className={styles.tick}>
             <span className={styles.value}>26°C</span>
-            <span className={styles.name}>MON</span>
+            <span className={styles.name}>Night</span>
             <span className={styles.dayNumber}>15</span>
           </div> */}
         </div>
