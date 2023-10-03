@@ -40,7 +40,7 @@
     grid-template-columns: 5% 1fr;
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
-        'header header footer'
-        'main main footer'
-        'main main footer';
+        'aside header footer'
+        'aside main footer'
+        'aside main footer';
 }
