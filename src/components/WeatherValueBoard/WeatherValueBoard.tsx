@@ -1,10 +1,6 @@
 import styles from './WeatherValueBoard.module.css';
-import {
-  RainyIcon,
-  SunnyIcon,
-  CloudyIcon,
-} from '../SGVIcons'
-import cn from 'classnames'
+import {RainyIcon, SunnyIcon, CloudyIcon} from '../SGVIcons';
+import cn from 'classnames';
 
 // interface WeatherValueBoardProps { }
 
@@ -13,9 +9,7 @@ export const WeatherValueBoard = () => {
     <div className={styles.weatherValueBoard}>
       <div className={styles.header}>
         <h2>How's the temperature today?</h2>
-        <div>
-
-        </div>
+        <div></div>
       </div>
       <div className={styles.lineChart}>
         <div className={styles.axis}>
@@ -43,23 +37,8 @@ export const WeatherValueBoard = () => {
             <span className={styles.name}>Night</span>
             <span className={styles.dayNumber}>13</span>
           </div>
-          {/* <div className={styles.tick}>
-            <span className={styles.value}>26°C</span>
-            <span className={styles.name}></span>
-            <span className={styles.dayNumber}>13</span>
-          </div>
-          <div className={styles.tick}>
-            <span className={styles.value}>26°C</span>
-            <span className={styles.name}>Evening</span>
-            <span className={styles.dayNumber}>14</span>
-          </div>
-          <div className={styles.tick}>
-            <span className={styles.value}>26°C</span>
-            <span className={styles.name}>Night</span>
-            <span className={styles.dayNumber}>15</span>
-          </div> */}
         </div>
       </div>
     </div>
-  )
+  );
 };
