@@ -33,7 +33,9 @@ export const Header = () => {
               <SearchIcon />
             </label>
           </div>
-          <NotificationIcon />
+          <div className={styles.border}>
+            <NotificationIcon />
+          </div>
         </form>
       </section>
     </header>
