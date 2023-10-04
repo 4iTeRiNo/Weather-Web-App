@@ -16,7 +16,7 @@
     top: -4px;
     left: -4px;
     border-radius: 50%;
-    border: 2px solid var(--color-text-grey);
+    border: 2px solid var(--color-grey);
     background-size: contain;
     z-index: 1;
 }

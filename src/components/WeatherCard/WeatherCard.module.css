@@ -80,7 +80,7 @@
     color: var(--color-text-main);
 }
 
-.nameprop {
+.nameProp {
     font-size: var(--font-size-small);
     letter-spacing: normal;
 }
