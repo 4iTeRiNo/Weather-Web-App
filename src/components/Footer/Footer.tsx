@@ -5,7 +5,6 @@ import {GraphSun} from '../GraphSun';
 import {WeatherPrediction} from '../WeatherPrediction';
 import {RadiationUVI} from '../RadiationUVI';
 
-
 // interface FooterProps { }
 
 export const Footer = () => {
@@ -24,5 +23,4 @@ export const Footer = () => {
       <Button />
     </footer>
   );
-
 };

@@ -1,4 +1,5 @@
 import {SunnyIcon} from '../SGVIcons';
+
 import styles from './RadiationUvi.module.css';
 
 // interface RadiationUviProps { }

@@ -7,7 +7,6 @@ import {
 } from '../SGVIcons'
 import cn from 'classnames'
 
-
 // interface WeatherValueBoardProps { }
 
 export const WeatherValueBoard = () => {
