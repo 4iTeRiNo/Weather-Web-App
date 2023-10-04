@@ -48,6 +48,7 @@ h1 {
 
 .searchForm {
     display: flex;
+    position: relative;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
@@ -93,6 +94,19 @@ h1 {
 
 #search {
     cursor: pointer;
+}
+
+.border {
+    display: flex;
+    position: relative;
+    width: 35px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-text-grey);
+    background-size: contain;
+    z-index: 1;
 }
 
 .notification {
