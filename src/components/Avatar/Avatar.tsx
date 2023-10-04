@@ -31,7 +31,7 @@ export const Avatar = () => {
             style={{width: sizeWrapper, height: sizeWrapper}}
           >
             <div
-              className='AvatarBorderBox'
+              className='avatarBorderBox'
               style={{width: sizeBox, height: sizeBox}}
             />
           </div>

@@ -16,13 +16,12 @@
     top: -4px;
     left: -4px;
     border-radius: 50%;
-    border: 2px solid var(--color-text-main);
-    /* background: var(----color-text-grey); */
+    border: 2px solid var(--color-text-grey);
     background-size: contain;
     z-index: 1;
 }
 
-.AvatarBorderBox {
+.avatarBorderBox {
     position: absolute;
     top: 2px;
     left: 2px;
