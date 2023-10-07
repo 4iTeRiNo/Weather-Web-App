@@ -1,11 +1,12 @@
 .main {
-    grid-area: main;
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas:
-        'navigate  cardTile cardTile cardTile'
-        'navigate  cardTile cardTile cardTile'
-        'navigate  currentWeather currentWeather currentWeather ';
+        grid-area: main;
+        display: grid;
+        width: 100%;
+        padding: 20px;
+        row-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+                'cardTile  cardTile airCard airCard'
+                'valueBoard valueBoard valueBoard  tomorrow';
 }

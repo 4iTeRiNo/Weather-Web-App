@@ -1,16 +1,36 @@
 .header {
     grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
 }
 
 .intro {
     display: flex;
     flex-direction: row;
+    max-width: 900px;
+    width: 100%;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
 }
 
 .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    vertical-align: middle;
+
+}
+
+.welcome {
     display: flex;
     flex-direction: column;
 }
@@ -28,6 +48,7 @@ h1 {
 
 .searchForm {
     display: flex;
+    position: relative;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
@@ -52,7 +73,6 @@ h1 {
     background-color: var(--background-color-button-overlay, white);
     box-shadow: var(--color-text-main);
     border-radius: 15px;
-
     padding: 0 16px;
 }
 
@@ -73,6 +93,19 @@ h1 {
 
 #search {
     cursor: pointer;
+}
+
+.border {
+    display: flex;
+    position: relative;
+    width: 35px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-text-grey);
+    background-size: contain;
+    z-index: 1;
 }
 
 .notification {
