@@ -1,39 +1,43 @@
 import styles from './Navigation.module.css';
 
-import { StatisticIcon, StatsIcon, CalendarIcon, PointIcon, SettingsIcon, LogInOutIcon  } from '../SGVIcons';
-
+import {StatisticIcon, StatsIcon, CalendarIcon, PointIcon, SettingsIcon, LogInOutIcon} from '../SGVIcons';
+import {Avatar} from '../Avatar';
 
 // interface NavigationProps { }
 
 export const Navigation = () => {
   return (
-
     <aside className={styles.navigation}>
-      <nav className="navigate">
-        <ul className="linkItems">
+      <nav className={styles.navigate}>
+        <ul className={styles.linkItems}>
+          <li>
+            <Avatar />
+          </li>
+        </ul>
+        <ul className={styles.linkItems}>
           <li className={styles.linkItem}>
-            <StatisticIcon className={styles.svgColor}/>
+            <StatisticIcon className={styles.svgColor} />
           </li>
           <li className={styles.linkItem}>
-            <StatsIcon className={styles.svgColor}/>
+            <StatsIcon className={styles.svgColor} />
           </li>
           <li className={styles.linkItem}>
             <CalendarIcon className={styles.svgColor} />
           </li>
           <li className={styles.linkItem}>
-            <PointIcon className={styles.svgColor}/>
+            <PointIcon className={styles.svgColor} />
           </li>
           <li className={styles.linkItem}>
-            <SettingsIcon className={styles.svgColor}/>
+            <SettingsIcon className={styles.svgColor} />
           </li>
         </ul>
 
-        <ul className="linkItems">
+        <ul className={styles.linkItems}>
           <li className={styles.linkItem}>
-            <LogInOutIcon className={styles.svgColor}/>
+            <LogInOutIcon className={styles.svgColor} />
           </li>
         </ul>
       </nav>
     </aside>
-  )
+  );
 };

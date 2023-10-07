@@ -1,0 +1,38 @@
+.radiationUvi {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    column-gap: 10px;
+    border-radius: 15px;
+    background-color: var(--background-color-darkblue);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 600;
+    row-gap: 9px;
+    justify-content: space-around;
+}
+
+.air {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    column-gap: 8px;
+    color: var(--color-white);
+}
+
+.risk {
+    font-size: 10px;
+    background-color: var(--background-color-lime);
+    border-radius: 15px;
+    color: var(--color-text-main);
+    padding: 6px;
+}
+
+.description {
+    font-weight: 400;
+    color: var(--color-white);
+}

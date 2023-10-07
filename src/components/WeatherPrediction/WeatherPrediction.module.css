@@ -1,0 +1,36 @@
+.weatherPrediction {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+    background-color: var(--color-white);
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+
+.svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather {
+    display: flex;
+    font-size: 14px;
+    font-weight: normal;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
