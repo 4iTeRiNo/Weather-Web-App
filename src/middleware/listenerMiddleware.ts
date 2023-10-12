@@ -1,41 +1,39 @@
-import {getCurrentPositionUser, getDefaultPosition, getWatchPositionUser} from '../store/action';
-// import {getAPIUrl} from '../utils/getAPIDefaultUrl';
-import {fetchCities} from '../store/defaultCitySlice';
-// import {startAppListening} from '../store/listenerMiddleware';
 import {createListenerMiddleware} from '@reduxjs/toolkit';
-import {APIMethods} from '../utils/getAPIUrl';
+import {getCurrentPositionUser, getDefaultPosition, getWatchPositionUser} from '../store/action';
+import {fetchCities} from '../store/defaultCitySlice';
+import {defaultMethod} from '../utils/getAPIUrl';
 
-export const result = createListenerMiddleware();
+export const Geolocation = createListenerMiddleware();
 
-result.startListening({
+Geolocation.startListening({
   actionCreator: getWatchPositionUser,
   effect: (action, listenerApi) => {
-    async function geo_success() {
+    // обрати внимание на эти функции, правильно ли я их реализовал
+    async function getLocationUser() {
       const response = await fetch('https://geolocation-db.com/json/');
       const data = await response.json();
       listenerApi.dispatch(getCurrentPositionUser(data.city));
     }
-    function error() {
-      listenerApi.dispatch(getDefaultPosition());
+    // эта переменная приходит из getAPIUrl
+    function getDefaultLocationUser() {
+      listenerApi.dispatch(getDefaultPosition(defaultMethod));
     }
-    navigator.geolocation.getCurrentPosition(geo_success, error);
+    navigator.geolocation.getCurrentPosition(getLocationUser, getDefaultLocationUser);
   },
 });
 
-result.startListening({
+Geolocation.startListening({
   actionCreator: getCurrentPositionUser,
   effect: (action, listenerApi) => {
-    console.log(action);
-
     const city = action.payload;
-
     listenerApi.dispatch(fetchCities(city));
   },
 });
 
-result.startListening({
+Geolocation.startListening({
   actionCreator: getDefaultPosition,
   effect: (action, listenerApi) => {
+    // тут по сути все просто?
     listenerApi.dispatch(fetchCities(action.payload));
   },
 });

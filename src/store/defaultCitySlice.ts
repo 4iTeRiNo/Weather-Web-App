@@ -1,4 +1,4 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import {createSlice, createAsyncThunk, AnyAction, PayloadAction} from '@reduxjs/toolkit';
 import {City} from '../types';
 import {getAPIUrl} from '../utils/getAPIUrl';
 
@@ -17,6 +17,7 @@ const initialState: defaultCities = {
 export const fetchCities = createAsyncThunk<City[], string, {rejectValue: string}>(
   'cities/fetchCities',
   async function (params, {rejectWithValue}) {
+    // фунция принимает два параметра, но один из них не понимаю как бросить опционально а не в лоб
     const response = await fetch(getAPIUrl('forecast', params));
 
     if (!response.ok) {
@@ -24,11 +25,14 @@ export const fetchCities = createAsyncThunk<City[], string, {rejectValue: string
     }
 
     const data = await response.json();
-    // console.log(data.forecast);
-
-    return data.forecast;
+    return data;
   },
 );
+
+//Доббавил функцию обработки входящих ошибок
+function isError(action: AnyAction) {
+  return action.type.endsWith('rejected');
+}
 
 const citiesSlice = createSlice({
   name: 'city',
@@ -44,7 +48,11 @@ const citiesSlice = createSlice({
         state.list = action.payload;
         state.status = 'succeeded';
       })
-      .addCase(fetchCities.rejected, (state) => {
+
+      //тут решил сделать через этоту фунцию, возможно не лучшая практика, пока не понимаю полной картины
+
+      .addMatcher(isError, (state, action: PayloadAction<string>) => {
+        state.error = action.payload;
         state.status = 'failed';
       });
   },
