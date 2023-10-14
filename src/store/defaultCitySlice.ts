@@ -9,6 +9,7 @@ type defaultCities = {
 };
 
 const initialState: defaultCities = {
+  // можно ли в стате запихать объект а не массив?
   list: [],
   status: 'idle',
   error: null,
@@ -17,7 +18,6 @@ const initialState: defaultCities = {
 export const fetchCities = createAsyncThunk<City[], string, {rejectValue: string}>(
   'cities/fetchCities',
   async function (params, {rejectWithValue}) {
-    // фунция принимает два параметра, но один из них не понимаю как бросить опционально а не в лоб
     const response = await fetch(getAPIUrl('forecast', params));
 
     if (!response.ok) {
@@ -29,7 +29,6 @@ export const fetchCities = createAsyncThunk<City[], string, {rejectValue: string
   },
 );
 
-//Доббавил функцию обработки входящих ошибок
 function isError(action: AnyAction) {
   return action.type.endsWith('rejected');
 }
@@ -49,7 +48,6 @@ const citiesSlice = createSlice({
         state.status = 'succeeded';
       })
 
-      //тут решил сделать через этоту фунцию, возможно не лучшая практика, пока не понимаю полной картины
 
       .addMatcher(isError, (state, action: PayloadAction<string>) => {
         state.error = action.payload;
