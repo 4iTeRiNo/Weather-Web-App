@@ -1,39 +1,30 @@
-import {createListenerMiddleware} from '@reduxjs/toolkit';
-import {getCurrentPositionUser, getDefaultPosition, getWatchPositionUser} from '../store/action';
-import {fetchCities} from '../store/defaultCitySlice';
-import {defaultMethod} from '../utils/getAPIUrl';
+import {getWatchPositionUser} from '../store/action';
+import {fetchCity} from '../store/thunks';
+// import {defaultMethod} from '../utils/getAPIUrl';
+import {createListenerMiddleware, addListener} from '@reduxjs/toolkit';
 
-export const Geolocation = createListenerMiddleware();
+import type {TypedStartListening, TypedAddListener} from '@reduxjs/toolkit';
+import type {RootState, AppDispatch} from '../store/index';
 
-Geolocation.startListening({
+export const listenerMiddleware = createListenerMiddleware();
+export type AppStartListening = TypedStartListening<RootState, AppDispatch>;
+export const startAppListening = listenerMiddleware.startListening as AppStartListening;
+export const addAppListener = addListener as TypedAddListener<RootState, AppDispatch>;
+
+startAppListening({
   actionCreator: getWatchPositionUser,
   effect: (action, listenerApi) => {
-    // обрати внимание на эти функции, правильно ли я их реализовал
-    async function getLocationUser() {
-      const response = await fetch('https://geolocation-db.com/json/');
-      const data = await response.json();
-      listenerApi.dispatch(getCurrentPositionUser(data.city));
-    }
-    // эта переменная приходит из getAPIUrl
-    function getDefaultLocationUser() {
-      listenerApi.dispatch(getDefaultPosition(defaultMethod));
-    }
-    navigator.geolocation.getCurrentPosition(getLocationUser, getDefaultLocationUser);
-  },
-});
+    console.log('Initial store', action);
 
-Geolocation.startListening({
-  actionCreator: getCurrentPositionUser,
-  effect: (action, listenerApi) => {
-    const city = action.payload;
-    listenerApi.dispatch(fetchCities(city));
-  },
-});
-
-Geolocation.startListening({
-  actionCreator: getDefaultPosition,
-  effect: (action, listenerApi) => {
-    // тут по сути все просто?
-    listenerApi.dispatch(fetchCities(action.payload));
+    navigator.geolocation.watchPosition(
+      async () => {
+        const response = await fetch('https://geolocation-db.com/json/');
+        const data = await response.json();
+        listenerApi.dispatch(fetchCity(data.city));
+      },
+      () => {
+        listenerApi.dispatch(fetchCity('London'));
+      },
+    );
   },
 });
