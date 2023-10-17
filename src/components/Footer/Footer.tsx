@@ -2,21 +2,30 @@ import styles from './Footer.module.css';
 
 import {Button} from '../Button';
 import {GraphSun} from '../GraphSun';
-import {WeatherPrediction} from '../WeatherPrediction';
 import {RadiationUVI} from '../RadiationUVI';
+import {WeatherPrediction} from '../WeatherPrediction';
+import {useAppSelector} from '../../hooks';
 
 // interface FooterProps { }
 
 export const Footer = () => {
+  const weatherValue = useAppSelector((state) => state?.defaultCities.list);
+
+  const weatherCity = weatherValue.map((value, index) => {
+    return (
+      <div key={index} className={styles.currentPoint}>
+        <div className={styles.city}>
+          <span className={styles.weather}>{value.current.condition.text}</span>
+          <span className={styles.weather}>{value.location.tz_id}</span>
+        </div>
+        <span className={styles.temp}>{value.current.temp_c}&#176;C</span>
+      </div>
+    );
+  });
+
   return (
     <footer className={styles.footer}>
-      <div className={styles.currentPoint}>
-        <div className={styles.city}>
-          <span className={styles.weather}>Sun</span>
-          <span className={styles.currentCity}>Boston, UA</span>
-        </div>
-        <span className={styles.temp}>22&#176;С</span>
-      </div>
+      {weatherCity}
       <GraphSun />
       <RadiationUVI />
       <WeatherPrediction />
