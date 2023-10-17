@@ -9,20 +9,3 @@
     padding: 20px;
     background-color: var(--background-color-lightgrey);
 }
-
-.currentPoint {
-    display: flex;
-    max-width: 200px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-
-    border-bottom: 1px solid var(--color-grey);
-}
-
-.city {
-    display: flex;
-    flex-direction: column;
-}
