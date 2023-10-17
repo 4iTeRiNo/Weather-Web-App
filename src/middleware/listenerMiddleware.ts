@@ -1,6 +1,5 @@
 import {getWatchPositionUser} from '../store/action';
 import {fetchCity} from '../store/thunks';
-// import {defaultMethod} from '../utils/getAPIUrl';
 import {createListenerMiddleware, addListener} from '@reduxjs/toolkit';
 
 import type {TypedStartListening, TypedAddListener} from '@reduxjs/toolkit';
@@ -14,9 +13,7 @@ export const addAppListener = addListener as TypedAddListener<RootState, AppDisp
 startAppListening({
   actionCreator: getWatchPositionUser,
   effect: (action, listenerApi) => {
-    console.log('Initial store', action);
-
-    navigator.geolocation.watchPosition(
+    navigator.geolocation.getCurrentPosition(
       async () => {
         const response = await fetch('https://geolocation-db.com/json/');
         const data = await response.json();
