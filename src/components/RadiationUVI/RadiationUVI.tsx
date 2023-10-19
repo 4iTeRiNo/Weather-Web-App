@@ -1,42 +1,40 @@
-import {SunnyIcon} from '../SGVIcons';
+import {useAppSelector} from '../../hooks';
+import {UKIndex} from '../../types';
+import {getValueByIndex} from '../../utils/getValueByIndex';
 
 import styles from './RadiationUvi.module.css';
 
-// interface RadiationUviProps { }
+export const RadiationUVI: React.FC = () => {
+  const weatherValue = useAppSelector((state) => state.defaultCities.list);
+  const width = 50;
+  const height = 50;
 
-export const RadiationUVI = () => {
-  const location = {
-    name: 'Kaliningrad',
-    region: 'Kaliningrad',
-    country: 'Russia',
-    weather: 'Partly cloudy',
-    temp_day: 14.0,
-    temp_night: 13.1,
-    uv: 3.0,
-    humidity: 82,
-    cloud: 37,
-    pressure: 1015.0,
-    visibility: 10.0,
-    wind_dir: 'W',
-    air_quality: 257.0,
-  };
   return (
-    <div className={styles.radiationUvi}>
-      <div className={styles.svg}>
-        <SunnyIcon
-          width='50px'
-          height='50px'
-        />
-      </div>
-      <div className={styles.wrapper}>
-        <span className={styles.air}>
-          <span className={styles.value}>{location.uv} UVI</span>
-          <span className={styles.risk}>Moderate</span>
-        </span>
-        <span className={styles.description}>
-          <span>Moderate risk of from UV rays</span>
-        </span>
-      </div>
-    </div>
+    <>
+      {weatherValue.map((value, index) => (
+        <div
+          key={index}
+          className={styles.radiationUvi}
+        >
+          <div className={styles.svg}>
+            <img
+              src={value.current.condition.icon}
+              width={`${width}px`}
+              height={`${height}px`}
+            />
+          </div>
+          <div className={styles.wrapper}>
+            <span className={styles.air}>
+              <span className={styles.value}>{value.current.uv} UVI</span>
+              <span className={styles.risk}>{getValueByIndex(UKIndex, value.current.uv)}</span>
+            </span>
+            <span className={styles.description}>
+              {/* Не могу придумать как сюда подставить значение из функции не вызывая ее тут в лоб */}
+              <span>{getValueByIndex(UKIndex, value.current.uv)} risk of from UV rays</span>
+            </span>
+          </div>
+        </div>
+      ))}
+    </>
   );
 };

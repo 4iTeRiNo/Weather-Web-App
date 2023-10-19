@@ -4,15 +4,15 @@ import {Button} from '../Button';
 import {GraphSun} from '../GraphSun';
 import {RadiationUVI} from '../RadiationUVI';
 import {WeatherPrediction} from '../WeatherPrediction';
-import { WeatherCity } from './WeatherCity';
+import {WeatherCity} from './WeatherCity';
 
 export const Footer = () => {
-return (
+  return (
     <footer className={styles.footer}>
-      <WeatherCity/>
+      <WeatherCity />
       <GraphSun />
       <RadiationUVI />
-      <WeatherPrediction />
+      <WeatherPrediction head='Weather Prediction'/>
       <Button />
     </footer>
   );

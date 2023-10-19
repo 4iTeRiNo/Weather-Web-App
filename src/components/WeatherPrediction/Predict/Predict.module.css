@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-wrap: pretty;
+
+
+    background-color: var(--color-white);
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+
+.svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather {
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    flex-direction: column;
+    row-gap: 8px;
+ }
+
+
+
+.temperature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
