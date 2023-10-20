@@ -1,6 +1,5 @@
 import styles from './Footer.module.css';
 
-import {Button} from '../Button';
 import {GraphSun} from '../GraphSun';
 import {RadiationUVI} from '../RadiationUVI';
 import {WeatherPrediction} from '../WeatherPrediction';
@@ -13,7 +12,6 @@ export const Footer = () => {
       <GraphSun />
       <RadiationUVI />
       <WeatherPrediction head='Weather Prediction'/>
-      <Button />
     </footer>
   );
 };

@@ -37,14 +37,12 @@ type TForecast = {
   forecastday: forecastday[];
 };
 
-type forecastday = [
-  {
-    date: string;
-    day: TDay;
-    astro: TAstro;
-    hour: THour;
-  },
-];
+type forecastday = {
+  date: string;
+  day: TDay;
+  astro: TAstro;
+  hour: THour;
+};
 
 type TDay = {
   maxtemp_c: string;
