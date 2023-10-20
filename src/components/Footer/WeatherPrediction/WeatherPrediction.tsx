@@ -17,25 +17,25 @@ export const WeatherPrediction = ({head}: WeatherPredictionProps) => {
       <h2>{head}</h2>
 
       {weatherValue.map((value, index) => {
-        const tomorrowDay = new Date(value.forecast.forecastday[1].date).getMonth();
-        const afterTomorrowDay = new Date(value.forecast.forecastday[2].date).getMonth();
+        const tomorrowDay = new Date(value.forecast.forecastDay[1].date).getMonth();
+        const afterTomorrowDay = new Date(value.forecast.forecastDay[2].date).getMonth();
         return (
           <div
             key={index}
             className={styles.weatherPrediction}
           >
             <Predict
-              imagePath={value.forecast.forecastday[1].day.condition.icon}
-              weather={value.forecast.forecastday[1].day.condition.text}
-              tempDay={value.forecast.forecastday[1].day.maxtemp_c}
-              tempNight={value.forecast.forecastday[1].day.mintemp_c}
+              imagePath={value.forecast.forecastDay[1].day.condition.icon}
+              weather={value.forecast.forecastDay[1].day.condition.text}
+              tempDay={value.forecast.forecastDay[1].day.maxtemp_c}
+              tempNight={value.forecast.forecastDay[1].day.mintemp_c}
               day={`${getValueByKey(Month, tomorrowDay)} ${tomorrowDay}`}
             />
             <Predict
-              imagePath={value.forecast.forecastday[2].day.condition.icon}
-              weather={value.forecast.forecastday[2].day.condition.text}
-              tempDay={value.forecast.forecastday[2].day.maxtemp_c}
-              tempNight={value.forecast.forecastday[2].day.mintemp_c}
+              imagePath={value.forecast.forecastDay[2].day.condition.icon}
+              weather={value.forecast.forecastDay[2].day.condition.text}
+              tempDay={value.forecast.forecastDay[2].day.maxtemp_c}
+              tempNight={value.forecast.forecastDay[2].day.mintemp_c}
               day={`${getValueByKey(Month, afterTomorrowDay)} ${afterTomorrowDay}`}
             />
           </div>

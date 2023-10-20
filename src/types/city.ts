@@ -34,10 +34,10 @@ type TCurrent = {
 };
 
 type TForecast = {
-  forecastday: forecastday[];
+  forecastDay: TForecastday[];
 };
 
-type forecastday = {
+type TForecastday = {
   date: string;
   day: TDay;
   astro: TAstro;
