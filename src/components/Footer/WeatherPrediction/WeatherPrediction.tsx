@@ -3,7 +3,7 @@ import styles from './WeatherPrediction.module.css';
 // import {CloudyIcon, SunnyIcon} from '../SGVIcons';
 import {Predict} from './Predict';
 import {useAppSelector} from '../../../hooks';
-import {getValueByIndex} from '../../../utils/getValueByIndex';
+import {getValueByKey} from '../../../utils/getValueByIKey';
 import {Month} from '../../../types';
 interface WeatherPredictionProps {
   head: string;
@@ -17,6 +17,8 @@ export const WeatherPrediction = ({head}: WeatherPredictionProps) => {
       <h2>{head}</h2>
 
       {weatherValue.map((value, index) => {
+        const tomorrowDay = new Date(value.forecast.forecastday[1].date).getMonth();
+        const afterTomorrowDay = new Date(value.forecast.forecastday[2].date).getMonth();
         return (
           <div
             key={index}
@@ -27,18 +29,14 @@ export const WeatherPrediction = ({head}: WeatherPredictionProps) => {
               weather={value.forecast.forecastday[1].day.condition.text}
               tempDay={value.forecast.forecastday[1].day.maxtemp_c}
               tempNight={value.forecast.forecastday[1].day.mintemp_c}
-              day={`${getValueByIndex(Month, new Date(value.forecast.forecastday[1].date).getMonth())} ${new Date(
-                value.forecast.forecastday[1].date,
-              ).getDate()}`}
+              day={`${getValueByKey(Month, tomorrowDay)} ${tomorrowDay}`}
             />
             <Predict
               imagePath={value.forecast.forecastday[2].day.condition.icon}
               weather={value.forecast.forecastday[2].day.condition.text}
               tempDay={value.forecast.forecastday[2].day.maxtemp_c}
               tempNight={value.forecast.forecastday[2].day.mintemp_c}
-              day={`${getValueByIndex(Month, new Date(value.forecast.forecastday[2].date).getMonth())} ${new Date(
-                value.forecast.forecastday[2].date,
-              ).getDate()}`}
+              day={`${getValueByKey(Month, afterTomorrowDay)} ${afterTomorrowDay}`}
             />
           </div>
         );

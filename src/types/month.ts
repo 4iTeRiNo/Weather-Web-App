@@ -1,6 +1,4 @@
-type TMonth = {
-  [key: number]: string;
-};
+type TMonth = Record<number, string>
 
 export const Month: TMonth = {
   0: 'January',

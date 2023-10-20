@@ -1,6 +1,6 @@
 import {useAppSelector} from '../../../hooks';
 import {UKIndex} from '../../../types';
-import {getValueByIndex} from '../../../utils/getValueByIndex';
+import {getValueByKey} from '../../../utils/getValueByIKey';
 
 import styles from './RadiationUvi.module.css';
 
@@ -26,11 +26,10 @@ export const RadiationUVI: React.FC = () => {
           <div className={styles.wrapper}>
             <span className={styles.air}>
               <span className={styles.value}>{value.current.uv} UVI</span>
-              <span className={styles.risk}>{getValueByIndex(UKIndex, value.current.uv)}</span>
+              <span className={styles.risk}>{getValueByKey(UKIndex, value.current.uv)}</span>
             </span>
             <span className={styles.description}>
-              {/* Не могу придумать как сюда подставить значение из функции не вызывая ее тут в лоб */}
-              <span>{getValueByIndex(UKIndex, value.current.uv)} risk of from UV rays</span>
+              <span>{getValueByKey(UKIndex, value.current.uv)} risk of from UV rays</span>
             </span>
           </div>
         </div>
