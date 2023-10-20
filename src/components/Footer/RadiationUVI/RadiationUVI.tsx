@@ -1,6 +1,6 @@
-import {useAppSelector} from '../../hooks';
-import {UKIndex} from '../../types';
-import {getValueByIndex} from '../../utils/getValueByIndex';
+import {useAppSelector} from '../../../hooks';
+import {UKIndex} from '../../../types';
+import {getValueByIndex} from '../../../utils/getValueByIndex';
 
 import styles from './RadiationUvi.module.css';
 

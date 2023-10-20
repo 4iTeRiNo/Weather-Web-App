@@ -2,9 +2,9 @@ import styles from './WeatherPrediction.module.css';
 
 // import {CloudyIcon, SunnyIcon} from '../SGVIcons';
 import {Predict} from './Predict';
-import {useAppSelector} from '../../hooks';
-import {getValueByIndex} from '../../utils/getValueByIndex';
-import {Month} from '../../types';
+import {useAppSelector} from '../../../hooks';
+import {getValueByIndex} from '../../../utils/getValueByIndex';
+import {Month} from '../../../types';
 interface WeatherPredictionProps {
   head: string;
 }
