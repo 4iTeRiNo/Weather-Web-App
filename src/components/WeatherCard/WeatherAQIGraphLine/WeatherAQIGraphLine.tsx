@@ -1,17 +1,30 @@
+import {CSSProperties} from 'react';
 import styles from './WeatherAqiGraphLine.module.css';
 import cn from 'classnames';
 
-interface WeatherAqiGraphLineProps {}
+interface WeatherAqiGraphLineProps {
+  good?: string;
+  standard?: string;
+  hazardous?: string;
+  style?: CSSProperties;
+  value: string;
+}
 
-export const WeatherAqiGraphLine = ({}: WeatherAqiGraphLineProps) => {
+export const WeatherAqiGraphLine = ({
+  good = 'Good',
+  standard = 'Standard',
+  hazardous = 'Hazardous',
+}: WeatherAqiGraphLineProps) => {
   return (
-    <div className={styles.weatherAqiGraphLine}>
-      <div className={styles.degree}>
-        <div className={cn(styles.good, styles.active)}>Good</div>
-        <div className={styles.standard}>Standard</div>
-        <div className={styles.hazardous}>Hazardous</div>
+    <>
+      <div className={styles.weatherAqiGraphLine}>
+        <div className={styles.degree}>
+          <div className={cn(styles.active)}>{good}</div>
+          <div className={cn(styles.active)}>{standard}</div>
+          <div className={cn(styles.active)}>{hazardous}</div>
+        </div>
+        <span className={styles.lineGradient}></span>
       </div>
-      <span className={styles.lineGradient}></span>
-    </div>
+    </>
   );
 };
