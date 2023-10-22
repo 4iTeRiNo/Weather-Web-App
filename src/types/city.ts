@@ -34,7 +34,7 @@ type TCurrent = {
 };
 
 type TForecast = {
-  forecastDay: TForecastday[];
+  forecastday: TForecastday[];
 };
 
 type TForecastday = {
