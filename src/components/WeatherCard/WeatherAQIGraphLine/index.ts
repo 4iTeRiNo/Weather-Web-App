@@ -1,1 +1,1 @@
-export * from './WeatherAqiGraphLine';
+export * from './WeatherAQIGraphLine';

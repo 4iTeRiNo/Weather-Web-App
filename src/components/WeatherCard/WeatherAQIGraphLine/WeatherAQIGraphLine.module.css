@@ -1,43 +1,43 @@
 .weatherAqiGraphLine {
-    grid-area: info;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    padding: 8px;
-    border-radius: 15px;
-    background-color: var(--color-white);
+  grid-area: info;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 8px;
+  border-radius: 15px;
+  background-color: var(--color-white);
 }
 
 .degree {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .active {
-    position: relative;
-    padding: 5px 10px;
-    border-radius: 15px;
-    color: var(--color-white);
-    background-color: var(--background-color-darkblue);
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: var(--color-white);
+  background-color: var(--background-color-darkblue);
 }
 
 .active:before {
-    border: solid;
-    border-color: var(--background-color-darkblue) transparent;
-    border-width: 5px 6px 0 6px;
-    content: "";
-    left: 40%;
-    bottom: -5px;
-    position: absolute;
+  border: solid;
+  border-color: var(--background-color-darkblue) transparent;
+  border-width: 5px 6px 0 6px;
+  content: '';
+  left: 40%;
+  bottom: -5px;
+  position: absolute;
 }
 
 .lineGradient {
-    display: flex;
-    width: 100%;
-
-    border-radius: 15px;
-    border: 2px solid #eb7726;
+  display: flex;
+  margin-inline-start: 4%;
+  height: 5px;
+  border-radius: 15px;
+  background: repeating-linear-gradient(45deg, #f79148d5, #f79148d5 5px, #f0741cfa 5px, #eb7726 10px);
 }

@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from './Title.module.css';
+import styles from './HeaderCard.module.css';
 
-interface TitleProps {
+interface HeaderCardProps {
   image: React.ReactNode;
   someText: string;
   nameCity: string;
 }
 
-export const Title = ({image, nameCity, someText}: TitleProps) => {
+export const HeaderCard = ({image, nameCity, someText}: HeaderCardProps) => {
   return (
     <div className={styles.title}>
       <div className={styles.svg}>{image}</div>

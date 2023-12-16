@@ -1,30 +1,37 @@
-import {CSSProperties} from 'react';
-import styles from './WeatherAqiGraphLine.module.css';
-import cn from 'classnames';
+import {indexAQI} from '../../../types/';
+import styles from './WeatherAQIGraphLine.module.css';
 
-interface WeatherAqiGraphLineProps {
-  good?: string;
-  standard?: string;
-  hazardous?: string;
-  style?: CSSProperties;
+interface WeatherAQIGraphLineProps {
   value: string;
 }
 
-export const WeatherAqiGraphLine = ({
-  good = 'Good',
-  standard = 'Standard',
-  hazardous = 'Hazardous',
-}: WeatherAqiGraphLineProps) => {
+export const WeatherAQIGraphLine = ({value}: WeatherAQIGraphLineProps) => {
+  const widthIndex = indexAQI.indexOf(value) + 1;
+
   return (
-    <>
-      <div className={styles.weatherAqiGraphLine}>
-        <div className={styles.degree}>
-          <div className={cn(styles.active)}>{good}</div>
-          <div className={cn(styles.active)}>{standard}</div>
-          <div className={cn(styles.active)}>{hazardous}</div>
-        </div>
-        <span className={styles.lineGradient}></span>
+    <div className={styles.weatherAqiGraphLine}>
+      <div className={styles.degree}>
+        {indexAQI.map((item, index) => {
+          if (item === value) {
+            return (
+              <div
+                key={index}
+                className={styles.active}
+              >
+                {item}
+              </div>
+            );
+          }
+          return <div key={index}>{item}</div>;
+        })}
       </div>
-    </>
+      {/* {indexAQI.indexOf(item => { */}
+      <span
+        className={styles.lineGradient}
+        style={{width: `${widthIndex * 30}%`}}
+      ></span>
+
+      {/* })} */}
+    </div>
   );
 };

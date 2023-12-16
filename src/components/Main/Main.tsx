@@ -4,12 +4,12 @@ import {WeatherTomorrow} from '../WeatherTomorrow';
 import {WeatherValueBoard} from '../WeatherValueBoard';
 import {CloudyIcon, WindyIcon} from '../SGVIcons';
 import {useAppSelector} from '../../hooks';
-import {Title} from '../WeatherCard/Title';
+import {HeaderCard} from '../WeatherCard/HeaderCard';
 import {WeatherMetrics} from '../WeatherCard/WeatherMetrics';
 import {WeatherInfoOther} from '../WeatherCard/WeatherInfoOther';
 
 import styles from './Main.module.css';
-import {WeatherAqiGraphLine} from '../WeatherCard/WeatherAQIGraphLine';
+import {WeatherAQIGraphLine} from '../WeatherCard/WeatherAQIGraphLine';
 import {getValueByKey} from '../../utils/getValueByKey';
 import {usIndexEpa} from '../../types';
 
@@ -18,37 +18,40 @@ export const Main = () => {
   return (
     <main className={styles.main}>
       <WeatherCard>
-        {weatherValue.map((value, index) => {
-          const getValue = getValueByKey(usIndexEpa, value.current.air_quality['us-epa-index']);
-          console.log(getValue);
+        {weatherValue.map((value) => {
+          const [first, ,] = value.forecast.forecastday;
+          const getValueIndex = getValueByKey(usIndexEpa, value.current.air_quality['us-epa-index']);
 
           return (
             <>
               <div className={cn(styles.weatherCard, styles.weather)}>
-                <Title
+                <HeaderCard
                   image={<CloudyIcon />}
                   someText={'Weather'}
                   nameCity={value.location.name}
                 />
                 <WeatherMetrics
-                  title={`${value.forecast.forecastday[0].day.maxtemp_c}°C`}
-                  subtitle={`${value.forecast.forecastday[0].day.mintemp_c}°C`}
+                  title={`${first.day.maxtemp_c}°C`}
+                  subtitle={`${first.day.mintemp_c}°C`}
                   value={value.current.condition.text}
                 />
                 <WeatherInfoOther
-                  titleP={'Pressure'}
-                  pressure={value.current.pressure_mb}
-                  titleV={'Visibility'}
-                  visibility={value.current.vis_km}
-                  titleH={'Humidity'}
-                  humidity={value.current.humidity}
+                  pressure={{
+                    title: 'Pressure',
+                    value: value.current.pressure_mb,
+                  }}
+                  visibility={{
+                    title: 'Visibility',
+                    value: value.current.vis_km,
+                  }}
+                  humidity={{
+                    title: 'Humidity',
+                    value: value.current.humidity,
+                  }}
                 />
               </div>
-              <div
-                key={index}
-                className={cn(styles.weatherCard, styles.airQuality)}
-              >
-                <Title
+              <div className={cn(styles.weatherCard, styles.airQuality)}>
+                <HeaderCard
                   image={<WindyIcon />}
                   someText={'Air Quality'}
                   nameCity={`Main pollution(2.5): ${value.current.air_quality.pm2_5}`}
@@ -58,7 +61,7 @@ export const Main = () => {
                   subtitle={'AQI'}
                   value={value.current.wind_dir}
                 />
-                <WeatherAqiGraphLine value={getValue} />
+                <WeatherAQIGraphLine value={getValueIndex} />
               </div>
             </>
           );

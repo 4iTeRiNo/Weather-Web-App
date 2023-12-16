@@ -8,3 +8,5 @@ export const usIndexEpa: TUsEpaIndex = {
   5: 'Hazardous',
   6: 'Hazardous',
 };
+
+export const indexAQI = ['Good', 'Moderate', 'Hazardous'];
