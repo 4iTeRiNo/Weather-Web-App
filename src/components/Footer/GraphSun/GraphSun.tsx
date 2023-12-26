@@ -9,7 +9,7 @@ export const GraphSun = () => {
   return (
     <>
       {weatherValue.map((value, index) => {
-        const [first, ,] = value.forecast.forecastday;
+        const [first] = value.forecast.forecastday;
 
         return (
           <div
