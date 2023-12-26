@@ -7,11 +7,10 @@ import {useAppSelector} from '../../hooks';
 import {HeaderCard} from '../WeatherCard/HeaderCard';
 import {WeatherMetrics} from '../WeatherCard/WeatherMetrics';
 import {WeatherInfoOther} from '../WeatherCard/WeatherInfoOther';
-
 import styles from './Main.module.css';
 import {WeatherAQIGraphLine} from '../WeatherCard/WeatherAQIGraphLine';
-import {getValueByKey} from '../../utils/getValueByKey';
 import {usIndexEpa} from '../../types';
+import {getTemplateString} from '../../utils/getTemplateString';
 
 export const Main = () => {
   const weatherValue = useAppSelector((state) => state.defaultCities.list);
@@ -19,9 +18,8 @@ export const Main = () => {
     <main className={styles.main}>
       <WeatherCard>
         {weatherValue.map((value) => {
-          const [first, ,] = value.forecast.forecastday;
-          const getValueIndex = getValueByKey(usIndexEpa, value.current.air_quality['us-epa-index']);
-
+          const [first] = value.forecast.forecastday;
+          const getValueIndex = Object.getOwnPropertyDescriptor(usIndexEpa, value.current.air_quality['us-epa-index']);
           return (
             <>
               <div className={cn(styles.weatherCard, styles.weather)}>
@@ -31,8 +29,8 @@ export const Main = () => {
                   nameCity={value.location.name}
                 />
                 <WeatherMetrics
-                  title={`${first.day.maxtemp_c}°C`}
-                  subtitle={`${first.day.mintemp_c}°C`}
+                  title={getTemplateString(first.day.maxtemp_c)}
+                  subtitle={getTemplateString(first.day.mintemp_c)}
                   value={value.current.condition.text}
                 />
                 <WeatherInfoOther
@@ -61,7 +59,7 @@ export const Main = () => {
                   subtitle={'AQI'}
                   value={value.current.wind_dir}
                 />
-                <WeatherAQIGraphLine value={getValueIndex} />
+                <WeatherAQIGraphLine value={getValueIndex?.value} />
               </div>
             </>
           );

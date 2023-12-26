@@ -36,7 +36,7 @@
 
 .lineGradient {
   display: flex;
-  margin-inline-start: 4%;
+  margin-inline-start: 2%;
   height: 5px;
   border-radius: 15px;
   background: repeating-linear-gradient(45deg, #f79148d5, #f79148d5 5px, #f0741cfa 5px, #eb7726 10px);
