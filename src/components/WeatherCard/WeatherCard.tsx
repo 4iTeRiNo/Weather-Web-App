@@ -1,6 +1,4 @@
 import styles from './WeatherCard.module.css';
-// import cn from 'classnames';
-
 interface WeatherCardProps {
   children: React.ReactNode;
 }
