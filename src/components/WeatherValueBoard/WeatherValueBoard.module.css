@@ -1,60 +1,74 @@
 .weatherValueBoard {
-    grid-area: valueBoard;
+  grid-area: valueBoard;
 }
 
-.lineChart{
-    display: flex;
-    height: 200px;
+.lineChart {
+  display: flex;
+  height: 200px;
 }
 
 .axis {
-    display: flex;
-    color: var(--color-text-grey);
-    text-transform: uppercase;
-    display: flex;
-    align-items: end;
-    width: 100%;
-    color: #000;
+  display: flex;
+  position: relative;
+  color: var(--color-text-grey);
+  text-transform: uppercase;
+  display: flex;
+  align-items: end;
+  width: 100%;
+  color: #000;
+  overflow: hidden;
+}
+.graphLine {
+  width: 500px;
+  height: 200px;
+  position: absolute;
 }
 
 .tick {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    position: relative;
-    font-size: 11px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  row-gap: 10px;
+
+  position: relative;
+  font-size: 11px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  /* padding-bottom: 10px; */
+  /* line-height: 20px; */
+}
+
+.name {
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .value {
-    font-weight: 700;
-    font-size: 1rem;
+  font-weight: 800;
+  font-size: 1rem;
 }
 
 .tick:not(:last-child):after {
-    content: "";
-    position: absolute;
-    display: block;
-    right: 0;
-    bottom: 0;
-    width: 1px;
-    height: 150px;
-    background: var(--color-text-grey);
+  content: '';
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 150px;
+  background: var(--color-text-grey);
 }
 
 .overlay {
-    width: 45px;
-    height: 45px;
-    padding: 7px;
-    border-radius: 50%;
-    border:1px solid var(--color-text-grey);
+  width: 45px;
+  height: 45px;
+  padding: 7px;
+  border-radius: 50%;
+  border: 2px solid var(--color-grey);
 }
 
 .active {
-    background-color: var(--background-color-darkblue);
+  background-color: var(--background-color-darkblue);
 }
