@@ -4,7 +4,7 @@ import {Footer} from './components/Footer';
 import {Header} from './components/Header';
 import {Main} from './components/Main';
 import {Navigation} from './components/Navigation';
-import { getWatchPositionUser } from './store/action';
+import {getWatchPositionUser} from './store/action';
 
 function App() {
   const dispatch = useAppDispatch();

@@ -7,6 +7,35 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, auto);
         grid-template-areas:
-                'cardTile  cardTile airCard airCard'
+                'cardTile  cardTile cardTile cardTile'
                 'valueBoard valueBoard valueBoard  tomorrow';
+}
+
+.weatherCard {
+        position: relative;
+        display: grid;
+        width: 100%;
+        max-width: 350px;
+        max-height: 250px;
+        height: 100%;
+        border-radius: 10%;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 15px 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+                'header header header'
+                'temperature . .'
+                'info info info';
+}
+
+.airQuality {
+        background: url('../../assets/cloudy/cloudy4.svg') no-repeat;
+        background-size: cover;
+}
+
+.weather {
+        background: url('../../assets/windy/windy5.svg') no-repeat;
+        background-size: cover;
 }
