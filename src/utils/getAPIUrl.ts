@@ -8,7 +8,7 @@ export const getAPIUrl = (endpoint: APIEndpoints = 'forecast', queryParams: {q: 
   const params = Object.entries({
     ...queryParams,
     key: API_KEY,
-    day: 3,
+    days: 3,
     aqi: 'yes',
   })
     .map(([key, value]) => {

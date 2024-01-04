@@ -1,9 +1,8 @@
 .weatherCards {
-    grid-area: cardTile;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    width: 100%;
+  grid-area: cardTile;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 100%;
 }
