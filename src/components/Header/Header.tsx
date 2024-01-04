@@ -1,6 +1,7 @@
 import styles from './Header.module.css';
 
 import {SearchIcon, NotificationIcon} from '../SGVIcons';
+import {Avatar} from '../Avatar';
 
 // interface HeaderProps { }
 
@@ -9,6 +10,11 @@ export const Header = () => {
     <header className={styles.header}>
       <section className={styles.intro}>
         <div className={styles.user}>
+          <ul className={styles.linkItems}>
+            <li>
+              <Avatar />
+            </li>
+          </ul>
           <div className={styles.welcome}>
             <h1>Hello,</h1>
             <span className={styles.name}>Username</span>
