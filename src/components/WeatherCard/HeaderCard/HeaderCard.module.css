@@ -1,0 +1,21 @@
+.title {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    grid-area: header;
+}
+
+.svg {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color-button-overlay);
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+.city {
+    display: flex;
+    flex-direction: column;
+}
