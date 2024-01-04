@@ -12,7 +12,7 @@ export const addAppListener = addListener as TypedAddListener<RootState, AppDisp
 
 startAppListening({
   actionCreator: getWatchPositionUser,
-  effect: (action, listenerApi) => {
+  effect: (_, listenerApi) => {
     navigator.geolocation.getCurrentPosition(
       async () => {
         const response = await fetch('https://geolocation-db.com/json/');

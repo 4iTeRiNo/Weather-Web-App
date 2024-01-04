@@ -1,0 +1,38 @@
+.weatherInfoOther {
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-area: info;
+}
+
+.tile {
+    border-radius: 15px;
+    line-height: 1.5;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.blue {
+    background-color: var(--background-color-darkblue);
+    color: var(--color-white);
+}
+
+.green {
+    background-color: var(--background-color-lime);
+    color: var(--color-text-main);
+}
+
+.white {
+    background-color: var(--background-color-main-light);
+    color: var(--color-text-main);
+}
+
+.nameProp {
+    font-size: var(--font-size-small);
+    letter-spacing: normal;
+}
+.valueProp {
+    font-weight: 500;
+}
