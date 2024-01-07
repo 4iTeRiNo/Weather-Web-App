@@ -70,6 +70,7 @@ type TDay = {
     icon: string;
   };
 };
+
 type TAstro = {
   sunrise: string;
   sunset: string;
@@ -84,6 +85,11 @@ type THour = [
     wind_degree: number;
     wind_dir: string;
     pressure_mb: string;
+    condition: {
+      text: string;
+      code: number;
+      icon: string;
+    };
     humidity: number;
     cloud: number;
     feelslike_c: number;

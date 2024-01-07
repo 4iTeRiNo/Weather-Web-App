@@ -1,4 +1,3 @@
-// import {CSSProperties} from 'react';
 import styles from './WeatherInfoOther.module.css';
 import cn from 'classnames';
 
@@ -6,17 +5,14 @@ interface WeatherInfoOtherProps {
   pressure: {
     title: string;
     value: number;
-    // style: CSSProperties;
   };
   visibility: {
     title: string;
     value: number;
-    // style: CSSProperties;
   };
   humidity: {
     title: string;
     value: number;
-    // style: CSSProperties;
   };
 }
 

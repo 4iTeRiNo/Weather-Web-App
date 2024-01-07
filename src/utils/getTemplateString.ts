@@ -1,3 +1,3 @@
 export const getTemplateString = (value: string | number): string => {
-  return value + '°C';
+  return Math.floor(Number(value)) + '°C';
 };

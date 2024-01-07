@@ -3,6 +3,7 @@ import styles from './WeatherPrediction.module.css';
 import {Predict} from './Predict';
 import {useAppSelector} from '../../../hooks';
 import {getConvertDate} from '../../../utils/getConvertDate';
+import {getTemplateString} from '../../../utils/getTemplateString';
 interface WeatherPredictionProps {
   head: string;
 }
@@ -25,15 +26,15 @@ export const WeatherPrediction = ({head}: WeatherPredictionProps) => {
             <Predict
               imagePath={second.day.condition.icon}
               weather={second.day.condition.text}
-              tempDay={second.day.maxtemp_c}
-              tempNight={second.day.mintemp_c}
+              tempDay={getTemplateString(second.day.maxtemp_c)}
+              tempNight={getTemplateString(second.day.mintemp_c)}
               day={getConvertDate(second.date)}
             />
             <Predict
               imagePath={third.day.condition.icon}
               weather={third.day.condition.text}
-              tempDay={third.day.maxtemp_c}
-              tempNight={third.day.mintemp_c}
+              tempDay={getTemplateString(third.day.maxtemp_c)}
+              tempNight={getTemplateString(third.day.mintemp_c)}
               day={getConvertDate(third.date)}
             />
           </div>
