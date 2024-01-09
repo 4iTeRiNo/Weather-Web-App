@@ -24,7 +24,7 @@ export const WeatherDataDay = ({data, timeOfDay}: WeatherDataDayProps) => {
       className={styles.wrapperTick}
     >
       {value.map((item, index) => {
-        const temperature = Math.floor(item.temp_c);
+        const temperature = item.pressure_mb;
 
         return (
           <div
@@ -45,7 +45,7 @@ export const WeatherDataDay = ({data, timeOfDay}: WeatherDataDayProps) => {
                 className={styles.overlay}
               />
             </span>
-            <span className={styles.value}>{temperature}</span>
+            <span className={styles.value}>{temperature + ' mb'}</span>
             <span className={styles.name}>{time.next().value}</span>
           </div>
         );

@@ -3,6 +3,7 @@ import {GraphLine} from './GraphLine';
 import {WeatherDataDay} from './WeatherDataDay';
 import {timeOfDay} from '../../constant';
 import {useAppSelector} from '../../hooks';
+import {Button} from './Button';
 
 export const WeatherValueBoard = () => {
   const weatherValue = useAppSelector((state) => state.defaultCities.list);
@@ -11,7 +12,7 @@ export const WeatherValueBoard = () => {
     <div className={styles.weatherValueBoard}>
       <div className={styles.header}>
         <h2>How's the temperature today?</h2>
-        <div></div>
+        <Button />
       </div>
       <div className={styles.lineChart}>
         <GraphLine />
