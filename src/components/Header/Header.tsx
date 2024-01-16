@@ -1,24 +1,16 @@
 import styles from './Header.module.css';
-
-// import {SearchIcon} from '../SGVIcons';
 import {Avatar} from '../Avatar';
 import {Search} from './Search/Search';
 import {useEffect, useState} from 'react';
-import {useAppDispatch} from '../../hooks';
-import {getSearchCity, getWatchPositionUser} from '../../store/action';
+import {useAppDispatch, useAppSelector} from '../../hooks';
 import {fetchCity} from '../../store/thunks';
 
-// interface HeaderProps { }
-
 export const Header = () => {
+  const error = useAppSelector((state) => state.defaultCities.error);
   const [searchText, setSearchText] = useState('');
-  console.log(searchText);
-
   const dispatch = useAppDispatch();
-  // console.log(searchText);
-
   useEffect(() => {
-    console.log(dispatch(fetchCity(searchText)));
+    dispatch(fetchCity(searchText));
   }, [dispatch, searchText]);
 
   return (
@@ -37,7 +29,7 @@ export const Header = () => {
         </div>
         <Search
           onSubmit={setSearchText}
-          hasError={false}
+          hasError={error}
         />
       </section>
     </header>

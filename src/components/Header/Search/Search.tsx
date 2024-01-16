@@ -1,10 +1,8 @@
 import styles from './Search.module.css';
 import {SearchIcon} from '../../SGVIcons';
-// import {fetchCity} from '../../../store/thunks';
-
 interface SearchProps {
   onSubmit: (value: string) => void;
-  hasError: boolean;
+  hasError: string | null;
 }
 
 type FormFields = {
@@ -17,13 +15,12 @@ export const Search = ({onSubmit, hasError}: SearchProps) => {
     const text = event.currentTarget.cityName.value;
 
     if (text.trim()) onSubmit(text);
-    event.currentTarget.reset;
-    console.log(text);
+    event.currentTarget.reset();
   };
 
   return (
     <form
-      autoComplete='on'
+      autoComplete='off'
       className={styles.searchForm}
       onSubmit={handleSubmit}
     >
@@ -37,9 +34,9 @@ export const Search = ({onSubmit, hasError}: SearchProps) => {
           className={styles.text}
           name='cityName'
           id='search'
-          placeholder='Search city'
+          placeholder='Search city on EN'
         />
-        {hasError ? (
+        {hasError !== null ? (
           <div className={styles.error}> No Result </div>
         ) : (
           <button
