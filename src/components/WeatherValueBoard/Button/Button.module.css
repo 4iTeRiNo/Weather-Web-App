@@ -1,0 +1,41 @@
+.navigate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  column-gap: 5px;
+}
+
+.linkItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  background: none;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 30%;
+  transition: background-color ease-in 0.2s;
+}
+
+.linkItem:hover {
+  background-color: var(--color-accent);
+  transition: background-color ease-in 0.3s;
+  .svgColor:hover {
+    color: var(--color-white);
+    transition: color ease 0.6s;
+  }
+}
+
+.active {
+  background-color: var(--color-accent);
+  transition: background-color ease-in 0.3s;
+  color: var(--color-white);
+  transition: color ease 0.6s;
+  .svgColor {
+    color: var(--color-white);
+    transition: color ease 0.6s;
+  }
+}

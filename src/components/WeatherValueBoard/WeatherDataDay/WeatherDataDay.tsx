@@ -1,4 +1,5 @@
-import styles from './WeatherValueBoard.module.css';
+import {getTemplateString} from '../../../utils/getTemplateString';
+import styles from './WeatherDataDay.module.css';
 import cn from 'classnames';
 
 interface WeatherDataDayProps {
@@ -26,7 +27,7 @@ export const WeatherDataDay = ({icon, text, value, timeOfDay, index}: WeatherDat
           className={styles.overlay}
         />
       </span>
-      <span className={styles.value}>{value}</span>
+      <span className={styles.value}>{getTemplateString(value)}</span>
       <span className={styles.name}>{timeOfDay}</span>
     </div>
   );

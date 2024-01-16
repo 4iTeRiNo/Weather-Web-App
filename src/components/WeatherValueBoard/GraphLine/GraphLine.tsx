@@ -1,5 +1,5 @@
 import {BundleCurve} from 'react-svg-curve';
-import styles from './WeatherValueBoard.module.css';
+import styles from './GraphLine.module.css';
 
 export const GraphLine = () => {
   return (
