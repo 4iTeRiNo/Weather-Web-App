@@ -1,11 +1,7 @@
 import styles from './WeatherValueBoard.module.css';
 
-import {
-  RainyIcon,
-  SunnyIcon,
-  CloudyIcon,
-} from '../SGVIcons'
-import cn from 'classnames'
+import {RainyIcon, SunnyIcon, CloudyIcon} from '../SGVIcons';
+import cn from 'classnames';
 
 // interface WeatherValueBoardProps { }
 
