@@ -1,44 +1,50 @@
 import styles from './WeatherValueBoard.module.css';
-
-import {RainyIcon, SunnyIcon, CloudyIcon} from '../SGVIcons';
-import cn from 'classnames';
-
-// interface WeatherValueBoardProps { }
+import {GraphLine} from './GraphLine/GraphLine';
+import {WeatherDataDay} from './WeatherDataDay';
+import {timeOfDay} from '../../constant';
+import {useAppSelector} from '../../hooks';
+import {Button} from './Button/Button';
+import {useState} from 'react';
 
 export const WeatherValueBoard = () => {
+  const weatherValue = useAppSelector((state) => state.defaultCities.list);
+  const [isIndex, setIsIndex] = useState<'temp_c' | 'wind_kph' | 'pressure_mb'>('temp_c');
+  const time = timeOfDay.values();
+  const getStringWeather = (value: string) => {
+    return value === 'temp_c' ? 'temperature' : value === 'wind_kph' ? 'wind' : 'pressure';
+  };
+  const valueWeather = getStringWeather(isIndex);
+
+  const tempData = weatherValue
+    .map((item) => {
+      return item.forecast.forecastday[0].hour.filter((_, index) => {
+        return [8, 12, 17, 21].some((hour) => index === hour);
+      });
+    })
+    .map((dataItem) =>
+      dataItem.map((value, index) => {
+        return (
+          <WeatherDataDay
+            value={value[isIndex]}
+            key={index}
+            index={index}
+            text={value.condition.text}
+            icon={value.condition.icon}
+            timeOfDay={time.next().value}
+          />
+        );
+      }),
+    );
+
   return (
     <div className={styles.weatherValueBoard}>
       <div className={styles.header}>
-        <h2>How's the temperature today?</h2>
-        <div></div>
+        <h2>How's the {valueWeather} today?</h2>
+        <Button isIndex={setIsIndex} />
       </div>
       <div className={styles.lineChart}>
-        <div className={styles.axis}>
-          <div className={styles.tick}>
-            <RainyIcon className={cn(styles.overlay, styles.active)} />
-            <span className={styles.value}>26°C</span>
-            <span className={styles.name}>Morning</span>
-            <span className={styles.dayNumber}>10</span>
-          </div>
-          <div className={styles.tick}>
-            <SunnyIcon className={cn(styles.overlay)} />
-            <span className={styles.value}>26°C</span>
-            <span className={styles.name}>Afternoon</span>
-            <span className={styles.dayNumber}>11</span>
-          </div>
-          <div className={styles.tick}>
-            <CloudyIcon className={cn(styles.overlay)} />
-            <span className={styles.value}>26°C</span>
-            <span className={styles.name}>Evening</span>
-            <span className={styles.dayNumber}>12</span>
-          </div>
-          <div className={styles.tick}>
-            <SunnyIcon className={cn(styles.overlay)} />
-            <span className={styles.value}>26°C</span>
-            <span className={styles.name}>Night</span>
-            <span className={styles.dayNumber}>13</span>
-          </div>
-        </div>
+        <GraphLine />
+        <div className={styles.wrapperTick}>{tempData}</div>
       </div>
     </div>
   );
