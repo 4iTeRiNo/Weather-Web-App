@@ -18,6 +18,7 @@ type TLocation = {
 type TCurrent = {
   last_updated: string;
   temp_c: number;
+  is_day: number;
   condition: {
     text: string;
     code: number;
