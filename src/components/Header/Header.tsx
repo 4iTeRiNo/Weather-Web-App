@@ -1,11 +1,18 @@
 import styles from './Header.module.css';
-
-import {SearchIcon, NotificationIcon} from '../SGVIcons';
 import {Avatar} from '../Avatar';
-
-// interface HeaderProps { }
+import {Search} from './Search/Search';
+import {useEffect, useState} from 'react';
+import {useAppDispatch, useAppSelector} from '../../hooks';
+import {fetchCity} from '../../store/thunks';
 
 export const Header = () => {
+  const error = useAppSelector((state) => state.defaultCities.error);
+  const [searchText, setSearchText] = useState('');
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(fetchCity(searchText));
+  }, [dispatch, searchText]);
+
   return (
     <header className={styles.header}>
       <section className={styles.intro}>
@@ -20,29 +27,10 @@ export const Header = () => {
             <span className={styles.name}>Username</span>
           </div>
         </div>
-        <form
-          autoComplete='on'
-          className={styles.searchForm}
-        >
-          <div className={styles.search}>
-            <input
-              type='text'
-              className={styles.text}
-              name='cityName'
-              id='search'
-              placeholder='Search city'
-            />
-            <label
-              htmlFor='search'
-              className='label'
-            >
-              <SearchIcon />
-            </label>
-          </div>
-          <div className={styles.border}>
-            <NotificationIcon />
-          </div>
-        </form>
+        <Search
+          onSubmit={setSearchText}
+          hasError={error}
+        />
       </section>
     </header>
   );

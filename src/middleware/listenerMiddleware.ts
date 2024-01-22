@@ -20,7 +20,7 @@ startAppListening({
         listenerApi.dispatch(fetchCity(data.city));
       },
       () => {
-        listenerApi.dispatch(fetchCity('London'));
+        listenerApi.dispatch(fetchCity('Barnaul'));
       },
     );
   },

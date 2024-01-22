@@ -26,7 +26,7 @@ const defaultCitiesSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchCity.fulfilled, (state, action) => {
-        state.list.push(action.payload);
+        state.list = [action.payload];
         state.status = 'succeeded';
       })
       .addMatcher(isError, (state, action: PayloadAction<string>) => {
