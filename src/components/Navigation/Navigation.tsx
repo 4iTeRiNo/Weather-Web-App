@@ -1,9 +1,6 @@
 import styles from './Navigation.module.css';
 
-import {StatisticIcon, StatsIcon, CalendarIcon, PointIcon, SettingsIcon, LogInOutIcon} from '../SGVIcons';
 import {Avatar} from '../Avatar';
-
-// interface NavigationProps { }
 
 export const Navigation = () => {
   return (
@@ -14,7 +11,7 @@ export const Navigation = () => {
             <Avatar />
           </li>
         </ul>
-        <ul className={styles.linkItems}>
+        {/* <ul className={styles.linkItems}>
           <li className={styles.linkItem}>
             <StatisticIcon className={styles.svgColor} />
           </li>
@@ -30,13 +27,13 @@ export const Navigation = () => {
           <li className={styles.linkItem}>
             <SettingsIcon className={styles.svgColor} />
           </li>
-        </ul>
+        </ul> */}
 
-        <ul className={styles.linkItems}>
+        {/* <ul className={styles.linkItems}>
           <li className={styles.linkItem}>
             <LogInOutIcon className={styles.svgColor} />
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </aside>
   );
