@@ -10,6 +10,7 @@ export {default as SunSetIcon} from '../../assets/svg/sunset.svg?react';
 export {default as SunRiseIcon} from '../../assets/svg/sunrise.svg?react';
 export {default as ThermometerIcon} from '../../assets/svg/thermometer.svg?react';
 export {default as UmbrellaIcon} from '../../assets/svg/umbrella.svg?react';
+export {default as Pressure} from '../../assets/svg/pressure.svg?react';
 export {default as RainyIcon} from '../../assets/rainy/rainyIcon.svg?react';
 export {default as CloudyIcon} from '../../assets/cloudy/cloudyIcon.svg?react';
 export {default as SunnyIcon} from '../../assets/sunny/sunnyIcon.svg?react';

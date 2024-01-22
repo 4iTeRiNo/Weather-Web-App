@@ -19,6 +19,7 @@ export const Main = () => {
       <WeatherCard>
         {weatherValue.map((value) => {
           const [first] = value.forecast.forecastday;
+
           const getValueIndex = Object.getOwnPropertyDescriptor(usIndexEpa, value.current.air_quality['us-epa-index']);
           return (
             <>

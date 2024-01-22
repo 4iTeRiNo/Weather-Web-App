@@ -27,7 +27,7 @@ export const Predict = ({imagePath, day, weather, tempDay, tempNight}: PredictPr
       </span>
       <span className={styles.temperature}>
         <span>
-          {tempDay}&#176;C / {tempNight}&#176;C
+          {tempDay} / {tempNight}
         </span>
       </span>
     </div>
