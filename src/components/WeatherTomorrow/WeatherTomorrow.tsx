@@ -5,9 +5,6 @@ import styles from './WeatherTomorrow.module.css';
 import {getImage} from '../../utils/getImage';
 import {codeBackground} from '../../types/codeIcon';
 
-// interface WeatherTomorrowProps { }
-// '°C'
-
 export const WeatherTomorrow = () => {
   const weatherValue = useAppSelector((state) => state.defaultCities.list);
 

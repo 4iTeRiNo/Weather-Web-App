@@ -8,7 +8,7 @@ export {default as WindyIcon} from '../../assets/svg/windyIcon.svg?react';
 export {default as AvatarICon} from '../../assets/user/avatar.svg?react';
 
 // Background
-export {default as PartlyCloudy} from '../../assets/cloudy/partlyCloudy.svg?react';
+export {default as PartlyCloudy} from '../../assets/cloudy/partlyCloudy.jpeg';
 export {default as Sunny} from '../../assets/sunny/sunny.jpeg';
 export {default as Cloudy} from '../../assets/cloudy/cloudy.svg';
 export {default as Snowy} from '../../assets/snowy/snowy.jpeg';
