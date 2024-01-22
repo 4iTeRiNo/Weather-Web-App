@@ -1,6 +1,5 @@
 import {Dispatch, SetStateAction, useState} from 'react';
-import {Pressure, ThermometerIcon, UmbrellaIcon} from '../../SGVIcons';
-import {widthIcon} from '../../../constant';
+import {Pressure, ThermometerIcon, WindyIcon} from '../../SGVIcons';
 import classNames from 'classnames';
 import styles from './Button.module.css';
 import {isValue} from '../../../utils/isValue';
@@ -13,9 +12,9 @@ export const Button = ({isIndex}: ButtonProps) => {
   const [isPressed, setIsPressed] = useState('0');
 
   const buttonsData = [
-    {id: '0', request: 'temp_c', button: <ThermometerIcon width={widthIcon} />},
-    {id: '1', request: 'wind_kph', button: <UmbrellaIcon width={widthIcon} />},
-    {id: '2', request: 'pressure_mb', button: <Pressure width={widthIcon} />},
+    {id: '0', request: 'temp_c', button: <ThermometerIcon />},
+    {id: '1', request: 'wind_kph', button: <WindyIcon />},
+    {id: '2', request: 'pressure_mb', button: <Pressure />},
   ];
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {

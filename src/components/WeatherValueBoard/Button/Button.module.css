@@ -18,6 +18,9 @@
   width: 30px;
   border-radius: 30%;
   transition: background-color ease-in 0.2s;
+  svg {
+    width: 30px;
+  }
 }
 
 .linkItem:hover {
