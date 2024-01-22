@@ -1,5 +1,4 @@
 import styles from './Search.module.css';
-import {SearchIcon} from '../../SGVIcons';
 interface SearchProps {
   onSubmit: (value: string) => void;
   hasError: string | null;
@@ -42,9 +41,7 @@ export const Search = ({onSubmit, hasError}: SearchProps) => {
           <button
             type='submit'
             className={styles.searchButton}
-          >
-            <SearchIcon />
-          </button>
+          ></button>
         )}
       </div>
     </form>
