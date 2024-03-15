@@ -3,14 +3,14 @@
 ![React](https://img.shields.io/badge/React-black?style=flat-square&logo=react)
 ![Redux](https://img.shields.io/badge/Redux-7a0661?style=flat-square&logo=redux)
 ![Axios](https://img.shields.io/badge/Axios/Fetch-black?style=flat-square&logo=axios)
-![Axios](https://img.shields.io/badge/css--modules-7f1f6b?style=flat-square&logo=css-modules)
+![Css](https://img.shields.io/badge/css--modules-7f1f6b?style=flat-square&logo=css-modules)
 
 <div align="center">
 
-## Привет, это пет-проект приложения погоды
+# Привет, это пет-проект приложения погоды
 
-**Приложение создавалось мной для демонстрации навыков работы с технологиями указанными в шапке**
-**Проект разрабатывался под наставничеством действующего middle  разработчика. Все фичи или task в теченни разработки проходили codeReview, это было сделано сцелью погружения в реальную среду разработки**
+## Приложение создавалось мной для демонстрации навыков работы с технологиями указанными в шапке
+> ***Проект разрабатывался под наставничеством действующего middle  разработчика. Все фичи или task в теченни разработки проходили codeReview, это было сделано сцелью погружения в реальную среду разработки***
 </div>
 
 ## Что было сделано?<br/>
@@ -22,7 +22,7 @@
 
 **P.s оно не задумывалось как адаптивное. Версия разработана только для PC**
 
-### Развернутое приложение по ссылке: https://react-weather-app-woad-ten.vercel.app/
+### Развернутое приложение по ссылке [туть](https://react-weather-app-woad-ten.vercel.app/);
 
-### API что использовался для определения погоды: https://www.weatherapi.com/
+### API что использовался для определения погоды [туть](https://www.weatherapi.com/);
 
